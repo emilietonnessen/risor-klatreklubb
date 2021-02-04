@@ -1,5 +1,7 @@
-import { eventListeners } from "@popperjs/core";
+import { menu, menuIcon, body } from "../abstracts/variables.js";
 
-export default function mobileMenu (item) {
-    console.log("test");
+export default function mobileMenu () {
+	menu.classList.toggle("menu-open")
+	menuIcon.classList.toggle("open")
+	body.classList.toggle("fixed")
 }
