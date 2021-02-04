@@ -36,6 +36,7 @@
     }
 
     &__menu{
+        background-color: $color-white;
         box-shadow: $boxshadow-nav;
         width: 100vw;
 
@@ -72,29 +73,36 @@
         }
     }
 
-    &__link:visited,
-    &__link:link {
-        padding: 1rem 3rem;
-        text-decoration: none;
-        text-transform: uppercase;
-        line-height: 6rem;
-        color: $color-black;
-        font-size: 1.7rem;
-        transition: all .3s;
+    &__link {
+        &:visited,
+        &:link {
+            padding: 1rem 3rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            line-height: 6rem;
+            color: $color-black;
+            font-size: 1.7rem;
+            transition: all .3s;
 
-        &:hover {
-            color: colors(primary);
-            transform: scale(1.2) translateY(-.5rem);
-        }
+            &:hover {
+                color: colors(primary);
+                transform: scale(1.2) translateY(-.5rem);
+            }
 
-        &:active {
-            color: colors(primary);
-            transform: scale(1.2) translateY(.2rem);
-        }
+            &:active {
+                color: colors(primary);
+                transform: scale(1.2) translateY(.2rem);
+            }
 
-        @media (max-width: $width-tablet-horizontal) {
-            color: $color-white;
+            @media (max-width: $width-tablet-horizontal) {
+                color: $color-white;
+            }
         }
+        
+        &--active:link, &--active:visited {
+            color: colors(secondary);
+        }
+        
     }
 }
 
