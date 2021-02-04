@@ -16,6 +16,7 @@ body {
     flex-direction: column;
     box-sizing: border-box;  
     @include html-body;
+    background-color: $color-bg-grey;
 }
 
 .wrapper {
