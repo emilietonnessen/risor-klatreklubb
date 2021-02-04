@@ -36,6 +36,8 @@ $width-desktop-large: 2560px;
 $width-widescreen: 3440px;
 
 // Add Box shadow properties
-$boxshadow-default: 0rem 1.2 rem 4rem rgba($color-black, .15);
-$boxshadow-hover: 0rem 1.2 rem 6rem rgba($color-black, .15);
-$boxshadow-active: 0rem 1.2 rem 2rem rgba($color-black, .15);
+$boxshadow-default: 0rem 1.2rem 4rem rgba($color-black, .15);
+$boxshadow-hover: 0rem 1.2rem 6rem rgba($color-black, .15);
+$boxshadow-active: 0rem 1.2rem 2rem rgba($color-black, .15);
+
+$boxshadow-nav: 0rem 1.5rem 2rem rgba($color-black, .04);
