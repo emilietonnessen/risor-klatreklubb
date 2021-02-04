@@ -1,6 +1,3 @@
-// Bootstrap
-// @import "../node_modules/bootstrap/scss/bootstrap";
-
 // Abstracts
 @import "./abstracts/variables";
 @import "./abstracts/mixin";
@@ -16,6 +13,8 @@
 // Components
 @import "./components/buttons";
 @import "./components/menu-icon";
+@import "./components/hero";
+@import "./components/gallery";
 
 // Layout
 @import "./layout/nav";
