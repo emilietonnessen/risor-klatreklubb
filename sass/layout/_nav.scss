@@ -1,11 +1,17 @@
 .nav {
-
     &__logo-container{
         background-color: $color-white;
+
+        @media (max-width: $width-tablet-horizontal) {
+            width: 100vw;
+            height: clamp(15rem, 20vh, 20rem);
+            box-shadow: $boxshadow-nav;
+        } 
     }
 
     &__logo {
-        max-width: 20vw;
+        width: 20vw;
+        max-width: 35rem;
         display: block;
         margin: 0 auto;
         transition: all .3s;
@@ -17,13 +23,23 @@
         &:active {
             transform: scale(.9);
         }
+
+        @media (max-width: $width-tablet-horizontal) {
+            width: 40vw;
+            max-width: 20rem;
+            margin: 0;
+            position: absolute;
+            top: 0rem;
+            left: 50%;
+            transform: translateX(-50%);
+        }
     }
 
     &__menu{
         box-shadow: $boxshadow-nav;
         width: 100vw;
 
-        @media (max-width: $width-mobile) {
+        @media (max-width: $width-tablet-horizontal) {
             z-index: 888;
             height: 100vh;
             width: 100vw;
@@ -32,8 +48,8 @@
             right: -100vw;
             background-image: linear-gradient(
                 to top left,
-                rgba($color-primary, .8),
-                rgba($color-secondary, .8)
+                rgba($color-primary, 1),
+                rgba($color-secondary, 1)
             );
             backdrop-filter: blur(5px);
             -webkit-backdrop-filter: blur(3px);
@@ -47,7 +63,7 @@
         list-style: none;
         justify-content: center;
 
-        @media (max-width: $width-mobile) {
+        @media (max-width: $width-tablet-horizontal) {
             flex-direction: column;
             text-align: center;
             justify-content: start;
@@ -75,5 +91,17 @@
             color: colors(primary);
             transform: scale(1.2) translateY(.2rem);
         }
+
+        @media (max-width: $width-tablet-horizontal) {
+            color: $color-white;
+        }
     }
+}
+
+.menu-open{
+    right: 0vw;
+}
+
+.fixed{
+    position: fixed;
 }
