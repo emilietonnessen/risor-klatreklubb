@@ -1,16 +1,30 @@
-// Contact Form Confirmation
-const queryString = window.location.search;
-const mailSent = "?mail-sent";
+import { menuIcon, menu } from "./components/abstracts/variables.js";
 
-// console.log(queryString);
+console.log("test");
 
-if (queryString === mailSent) {
-   alert("Meldingen din ble sendt. Vi tar kontakt så raskt som mulig!"); 
+menuIcon.addEventListener("click", mobileMenu);
+
+// Variables
+const menuClosed = menu.style.right = "-100vw";
+const menuOpened = menu.style.right = "0vw";
+
+function mobileMenu () {
+    console.log(menu);
+
+    if(menuOpened) {
+        menu.style.right = "0vw";
+    } 
+
+    if (menuClosed) {
+        menu.style.right = "-100vw";
+    }
+
 }
 
-/* Mobile menu*/
-$(document).ready(function(){
-	$('.nav__icon').click(function(){
+
+
+/* export default $(document).ready(function(){
+	$('.nav__menu__hamburger-icon').click(function(){
 		$(this).toggleClass('open');
 
 		if($(this).hasClass('open')) {
@@ -21,4 +35,4 @@ $(document).ready(function(){
 			$('body').removeClass('fixed');
 		}
 	});
-});
+}); */
