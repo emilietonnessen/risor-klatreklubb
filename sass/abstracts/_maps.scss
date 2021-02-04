@@ -10,11 +10,6 @@ $colors: (
         light: lighten($color-secondary, $color-lighten),
         dark: darken($color-secondary, $color-darken),
     ),
-    tertiary: (
-        base: $color-tertiary,
-        light: lighten($color-tertiary, $color-lighten),
-        dark: darken($color-tertiary, $color-darken),
-    ),
     grey: (
         base: $color-grey,
         light: lighten($color-grey, $color-lighten),
