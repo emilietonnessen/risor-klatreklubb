@@ -22,3 +22,18 @@ h1, h2, h3, h4, h5, h6{
         margin-bottom: 3rem;
     }
 }
+
+.heading__secondary{
+    display: inline-block;
+    background-image: 
+        linear-gradient(
+            to right, 
+            colors(primary, light), 
+            colors(primary, dark)
+        );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 2.6rem;
+    margin-bottom: 1rem;
+}
