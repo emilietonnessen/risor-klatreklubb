@@ -1,0 +1,41 @@
+// Colors
+$color-primary: #033474;
+$color-secondary: #0581E8;
+
+$color-grey: #d4d4d4;
+$color-bg-grey: #F2F9FF;
+
+$color-white: #FFFFFF;
+$color-black: #000000;
+$color-error: #C90000;
+
+$color-lighten: 10;
+$color-darken: 10;
+
+// Grid
+$grid-width: 114rem;
+$gutter-vertical: 8rem;
+$gutter-horizontal: 6rem;
+
+// Font Sizes
+$default-fontsize: 1.6rem;
+
+// Fonts
+$font-body: montserrat, sans-serif;
+$font-heading: sofia-pro, sans-serif;
+$font-nav: termina, sans-serif;
+
+// Media Query
+$width-mobile: 576px;
+$width-tablet-vertical: 768px;
+$width-tablet-horizontal: 992px;
+$width-laptop: 1200px;
+$width-laptop-large: 1400px;
+$width-desktop: 1920px;
+$width-desktop-large: 2560px;
+$width-widescreen: 3440px;
+
+// Add Box shadow properties
+$boxshadow-default: 0rem 1.2 rem 4rem rgba($color-black, .15);
+$boxshadow-hover: 0rem 1.2 rem 6rem rgba($color-black, .15);
+$boxshadow-active: 0rem 1.2 rem 2rem rgba($color-black, .15);

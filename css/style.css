@@ -1,24 +1,39 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
 
+html {
+  font-size: 62.5%;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+}
 
-/* CSS Import: */
-@import url("components/base.css");
-@import url("components/typography.css");
-@import url("components/layout.css");
-@import url("components/footer.css");
-@import url("components/nav.css");
-@import url("components/nav-icon.css");
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+}
 
-@import url("components/buttons.css");
-@import url("components/info.css");
-@import url("components/header.css");
-@import url("components/contact-form.css");
-@import url("components/jumbotron.css");
-@import url("components/facebook.css");
-@import url("components/contact-section.css");
-@import url("components/links.css");
-@import url("components/about.css");
-
-
-
-/* Font Import: */
-@import url("https://use.typekit.net/fns1nxm.css");
+.wrapper {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}
+/*# sourceMappingURL=style.css.map */

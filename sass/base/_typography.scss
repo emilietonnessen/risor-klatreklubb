@@ -1,0 +1,20 @@
+body{
+    font-display: auto;
+    font-family: $font-body;
+    font-size: $default-fontsize;
+    line-height: 1.7;
+    color: $color-black;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: $font-heading;
+    text-transform: uppercase;
+}
+
+.paragraph{
+    font-size: $default-fontsize;
+    
+    &:not(:last-child){
+        margin-bottom: 3rem;
+    }
+}
