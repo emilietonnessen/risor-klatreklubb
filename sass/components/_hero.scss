@@ -1,0 +1,59 @@
+.hero {
+    background-image: 
+        linear-gradient(
+            to bottom right,
+            rgba(colors(secondary, light), 0.9), 
+            rgba(colors(primary, dark), 0.9)),
+        url("../../images/jumbotron.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    width: 100vw;
+    height: 60vh;
+    backface-visibility: hidden;
+    position: relative;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+
+    &__content {
+        display: block;
+        width: 100%;
+        padding: clamp(1.5rem, 2vw, 5rem);
+        border-radius: 3px;
+        backface-visibility: hidden;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 40%;
+        left: 50%;
+        text-align: center;
+    }
+
+    &__headline {
+        text-align: center;
+        color: $color-white;
+        font-weight: 200;
+
+        &--primary {
+            display: block;
+            font-size: 7rem;
+            letter-spacing: 8px;
+            line-height: 7rem;
+        }
+
+        &--sub {
+            display: block;
+            font-size: 2.5rem;
+            letter-spacing: 13px;
+            line-height: 7rem;
+        }
+    }
+
+    &__text{
+        font-size: 0;
+    }
+
+    &__btn:visited,
+    &__btn:link {
+        margin-top: 8rem;
+    }
+}
