@@ -1,0 +1,225 @@
+/* Informasjon layout: -------------------------- */
+.info{
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+}
+
+.info__box{
+    background: #F2F9FF;
+}
+
+.info__box--border{
+    border: 1px solid #033474;
+}
+
+.info__box__text{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    display: flex;
+    position: relative;
+}
+
+.price{
+    font-weight: 600;
+    position: absolute;
+    right: 0;
+}
+
+.info__box__text--extra-info{
+    color: grey;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.map{
+    width: 100%;
+    box-sizing: border-box;
+}
+/* ---------------------------------------------- */
+
+
+
+
+/* RESPONSIVE DESIGN: --------------------------- */
+ /* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .info__box--border{
+        padding: 10px
+    }
+
+    .info__box{
+        padding: 10px;
+        margin: 0 0px 0px 0;
+    }
+
+    .info__box__text--extra-info,
+    .info__box__text{
+        font-size: 12px;
+    }
+
+    .info__section__title{
+        margin-top: 30px;
+    }
+
+    .info__box__text--extra-info{
+        padding: 0;
+        margin-bottom: 16px;
+    }
+
+    .info__box__text--info-below{
+        margin-bottom: 5px;
+    }
+
+    .map{
+        height: 250px;
+    }
+}
+
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .info__box--border{
+        padding: 20px
+    }
+
+    .info__box{
+        padding: 20px;
+        margin: 0 0px 20px 0;
+    }
+
+    .info__box__text--extra-info,
+    .info__box__text{
+        font-size: 14px;
+    }
+
+    .info__box__text--extra-info{
+        padding: 0;
+        margin-bottom: 16px;
+    }
+
+    .info__section__title{
+        margin-top: 40px;
+    }
+
+    .info__box__text--info-below{
+        margin-bottom: 5px;
+    }
+
+    .map{
+        height: 250px;
+    }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .info__box--border{
+        padding: 20px
+    }
+
+    .info__box{
+        padding: 20px;
+        margin: 0 0px 20px 0;
+    }
+
+    .info__box__text--extra-info,
+    .info__box__text{
+        font-size: 16px;
+    }
+
+    .info__box__text--extra-info{
+        padding: 0;
+        margin-bottom: 16px;
+    }
+
+    .info__section__title{
+        margin-top: 40px;
+    }
+
+    .info__box__text--info-below{
+        margin-bottom: 5px;
+    }
+
+    .map{
+        height: 250px;
+    }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .info__box--border{
+        padding: 20px
+    }
+
+    .info__box{
+        padding: 20px;
+        margin: 0 0px 20px 0;
+    }
+
+    .info__box__text--extra-info,
+    .info__box__text{
+        font-size: 16px;
+    }
+
+    .info__box__text--extra-info{
+        padding: 0;
+        margin-bottom: 16px;
+    }
+
+    .info__section__title{
+        margin-top: 40px;
+    }
+
+    .info__box__text--info-below{
+        margin-bottom: 5px;
+    }
+
+    .map{
+        height: 250px;
+    }
+
+    .info__section__title:first-child{
+        margin-top: 0;
+    }
+}
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .info__box{
+        padding: 20px;
+        margin: 0 20px 20px 0;
+    }
+
+    .info__box:first-child{
+        margin-bottom: 20px;
+    }
+
+    .info__box__text{
+        margin-bottom: 16px;
+    }
+
+    .info__box--border{
+        padding: 20px
+    }
+
+    .info__box__text--extra-info{
+        padding: 0;
+        margin-bottom: 16px;
+    }
+
+    .info__box__text--info-below{
+        margin-bottom: 5px;
+    }
+
+    .map{
+        height: 250px;
+    }
+
+    .info__section__title{
+        margin-top: 40px;
+    }
+
+    .info__section__title:first-child{
+        margin-top: 0;
+    }
+}
+/* ---------------------------------------------- */

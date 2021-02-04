@@ -1,0 +1,182 @@
+/* DEFAULT TYPOGRAPHY: -------------------------- */
+h1, h2, h3, h4, h5, h6 {
+    font-family: sofia-pro, sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+body {
+    font-family: montserrat, sans-serif;
+    font-weight: 300;
+}
+
+.nav__link,
+nav {
+    font-family: termina, sans-serif;
+}
+
+label{
+    font-family: sofia-pro, sans-serif;
+    text-transform: uppercase;
+}
+/* ---------------------------------------------- */
+
+
+
+
+/* RESPONSIVE DESIGN: --------------------------- */
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    h1{
+        font-size: 35px;
+    }
+
+    h2{
+        font-size: 32px;
+    }
+
+    h3{
+        font-size: 28px;
+    }
+
+    h4{
+        font-size: 24px;
+    }
+
+    h5{ 
+        font-size: 20px;
+    }
+
+    h6{ 
+        font-size: 16px;
+    }
+
+    body{
+        font-size: 14px;
+    }
+}
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    h1{
+        font-size: 40px;
+    }
+
+    h2{
+        font-size: 36px;
+    }
+
+    h3{
+        font-size: 32px;
+    }
+
+    h4{
+        font-size: 28px;
+    }
+
+    h5{ 
+        font-size: 24px;
+    }
+
+    h6{ 
+        font-size: 20px;
+    }
+
+    body{
+        font-size: 16px;
+    }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    h1{
+        font-size: 44px;
+    }
+
+    h2{
+        font-size: 40px;
+    }
+
+    h3{
+        font-size: 36px;
+    }
+
+    h4{
+        font-size: 32px;
+    }
+
+    h5{ 
+        font-size: 28px;
+    }
+
+    h6{ 
+        font-size: 24px;
+    }
+
+    body{
+        font-size: 16px;
+    }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    h1{
+        font-size: 44px;
+    }
+
+    h2{
+        font-size: 40px;
+    }
+
+    h3{
+        font-size: 36px;
+    }
+
+    h4{
+        font-size: 32px;
+    }
+
+    h5{ 
+        font-size: 28px;
+    }
+
+    h6{ 
+        font-size: 24px;
+    }
+
+    body{
+        font-size: 16px;
+    }
+}
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    h1{
+        font-size: 44px;
+    }
+
+    h2{
+        font-size: 40px;
+    }
+
+    h3{
+        font-size: 36px;
+    }
+
+    h4{
+        font-size: 32px;
+    }
+
+    h5{ 
+        font-size: 28px;
+    }
+
+    h6{ 
+        font-size: 24px;
+    }
+
+    body{
+        font-size: 16px;
+    }
+}
+/* ---------------------------------------------- */
