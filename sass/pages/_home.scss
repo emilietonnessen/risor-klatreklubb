@@ -1,3 +1,6 @@
 .section-about {
     padding: 20rem 0;
+    animation-name: moveInTop;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
 }
