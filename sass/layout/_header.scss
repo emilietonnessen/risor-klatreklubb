@@ -1,0 +1,34 @@
+.header {
+    width: $grid-width;
+    margin: 0 auto; 
+    display: block;
+
+    &__headline {
+        
+
+        &--primary {
+            text-align: center;
+            font-size: 4rem;
+            background-image: 
+                linear-gradient(
+                    150deg, 
+                    colors(secondary), 
+                    colors(primary, dark)
+                );
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        &--white {
+            color: $color-white;
+            text-align: center;
+            font-weight: 300;
+            font-size: 5rem;
+            letter-spacing: 20px;
+            animation-name: moveInTop;
+            animation-duration: 1s;
+            animation-timing-function: ease-out;
+        }
+    }
+}
