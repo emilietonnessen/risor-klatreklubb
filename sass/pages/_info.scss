@@ -1,0 +1,99 @@
+.section-info {
+    padding: 10rem 0;
+
+
+    &--header {
+        text-align: center;
+        background-image: 
+        linear-gradient(
+            to bottom right,
+            rgba(colors(secondary, light), 0.9), 
+            rgba(colors(primary, dark), 0.9)),
+        url("../../images/contact-form.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50% 100%;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+        padding: 15rem 0;
+    }
+}
+
+.opening-hours {
+    background-color: rgba($color-white, .8);
+    display: inline-block;
+    padding: 1.5rem 3rem;
+    margin: 6rem 0 3rem 0;
+    text-align: left;
+    transform: skewX(-10deg);
+
+    &__text{
+        padding: .7rem 2rem;
+        margin-bottom: 1rem;
+        border-bottom: 1px solid $color-white;
+        transform: skewX(10deg);
+    }
+
+    &__time {
+        padding-left: 10rem;
+        transform: skewX(10deg);
+    }
+}
+
+.info-btn {
+    
+        animation: moveInBottom .5s ease-out .75s;
+        animation-fill-mode: backwards;
+    
+}
+
+.info-box {
+    background-color: rgba(white, .2);
+    margin: 1rem;
+    padding: 1rem;
+
+    &__border {
+        border: 1px solid colors(primary);
+        padding: 1rem;
+    }
+}
+
+
+
+.map {
+    width: 100vw;
+    height: 40rem;
+    display: block;
+}
+
+.section-price {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 1300px;
+    margin: 0 auto;
+    padding: 15rem 0;
+}
+
+.section-info-card {
+        text-align: center;
+        background-image: 
+        linear-gradient(
+            to bottom right,
+            rgba(colors(secondary, light), 0.9), 
+            rgba(colors(primary, dark), 0.9)),
+        url("../../images/contact-form.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50% 100%;
+        -webkit-clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
+        clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
+        padding: 15rem 0;
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        width: 1300px;
+        margin: 0 auto;
+        padding: 15rem 0;
+    }
+}
