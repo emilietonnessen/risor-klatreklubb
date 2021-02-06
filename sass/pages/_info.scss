@@ -9,7 +9,7 @@
             to bottom right,
             rgba(colors(secondary, light), 0.9), 
             rgba(colors(primary, dark), 0.9)),
-        url("../../images/contact-form.jpg");
+        url("../images/contact-lg.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: 50% 100%;
@@ -81,7 +81,7 @@
             to bottom right,
             rgba(colors(secondary, light), 0.9), 
             rgba(colors(primary, dark), 0.9)),
-        url("../../images/contact-form.jpg");
+        url("../images/ocean-lg.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: 50% 100%;
@@ -89,11 +89,11 @@
         clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
         padding: 15rem 0;
 
-    &__grid {
+   /*  &__grid {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         width: 1300px;
         margin: 0 auto;
         padding: 15rem 0;
-    }
+    } */
 }

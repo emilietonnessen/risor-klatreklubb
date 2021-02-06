@@ -1,7 +1,7 @@
 .hero {
     background-image: 
         linear-gradient(to bottom right, rgba(colors(secondary, light), 0.9), rgba(colors(primary, dark), 0.9)),
-        url("../../images/jumbotron.jpg");
+        url("../images/jumbotron-lg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -22,13 +22,13 @@
 
     &__content {
         padding: clamp(1.5rem, 2vw, 5rem);
-        // border-radius: 3px;
         backface-visibility: hidden;
         position: absolute;
         transform: translate(-50%, -50%);
         top: 40%;
         left: 50%;
         text-align: center;
+        width: 100%;
     }
 
     &__headline {
@@ -47,7 +47,7 @@
             line-height: 7rem;
             letter-spacing: 2px;
 
-            @media (min-width:$width-laptop-large) {
+            @include respond(lap-lg) {
                 font-size: 7rem;
                 line-height: 7rem;
                 letter-spacing: 8px;
@@ -66,11 +66,11 @@
             line-height: 2rem;
             margin-top: 2rem;
 
-            @media (min-width:$width-laptop-large) {
+            @include respond(lap-lg) {
                 margin-top: 0;
                 font-size: 2.5rem;
                 letter-spacing: 13px;
-                line-height: 7rem;
+                line-height: 8rem;
             }
         }
     }
