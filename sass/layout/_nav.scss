@@ -1,12 +1,13 @@
 .nav {
-    &__logo-container{
+    &__logo-container {
         background-color: $color-white;
 
         @media (max-width: $width-tablet-horizontal) {
             width: 100vw;
-            height: clamp(15rem, 20vh, 20rem);
+            height: 40vw;
+            max-height: 20rem;
             box-shadow: $boxshadow-nav;
-        } 
+        }
     }
 
     &__logo {
@@ -102,7 +103,6 @@
         &--active:link, &--active:visited {
             color: colors(secondary);
         }
-        
     }
 }
 
