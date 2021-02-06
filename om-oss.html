@@ -67,32 +67,53 @@
 
         <!-- Header: -->
         <header class="header">
-            <h1 class="header__headline-primary">Alt du trenger for å besøke oss</h1>
+            <h1 class="header__headline header__headline--primary u-margin-top-lg u-margin-bottom-md u-text-align-left">Om Oss</h1>
         </header>
 
         
         <!-- Main Content: -->
-        <main class="container">
+        <main class="about">
             <div class="row">
-                <div class="col-sm-12 col-md-12 col-lg-6">
-                    <header class="header">
-                        <h1 class="col-12 headline">Om Oss</h1>
-                    </header>
-                    <p>
+                <div class="col-1-of-2">
+                    <p class="paragraph">
                         Risør klatreklubb er en klatreklubb for alle. Dette innebærer at vi er opptatt av å gjøre en innsats for at absolutt alle skal få mulighet til å prøve å klatre hos oss, uansett alder, ferdighetsnivå og erfaring.
                     </p>
-                    <p>
+                    <p class="paragraph">
                         Våre aktiviteter er basert på idrettsglede, fellesskap og god helse. For at våre medlemmer skal oppleve dette ønsker vi å legge til rette for at skal få kjenne på mestringsfølelse, et godt samhold og at de skal føle seg inkludert. Vi ønsker å være en klubb med et godt etablert klatremiljø for ungdom, spesielt for de som ikke allerede er med i et idrettslag.
                     </p>
-                    <p>
+                    <p class="paragraph">
                         Risør klatreklubb ble stiftet 3. november 2014. Vi holder hovedsakelig til i Risørhallen, med en klatrevegg på over 300 m² og ca. 12 meter på det høyeste, pluss buldrerom Klatreveggen ble bygget sommeren 2015 og sommeren 2016 ble buldrerommet ferdig.
                     </p>
-                    <p>
+                    <p class="paragraph">
                         Siden veggen vår står i en flerbrukshall har vi ikke åpent hele tiden, men faste treningstider 3 ganger i uka, fra starten av september til starten av mai. Alle treningene er åpne for alle, noe som gjøre at klatrere i ulike aldre og ulik.
                     </p>
                 </div>
-                <div class="about__img col-sm-12 col-md-12 col-lg-6"></div>
+                <div class="col-1-of-2">
+                    <div class="gallery about__hover-gallery">
+                        <img src="./images/about-1.jpg" alt="Photo 1" class="gallery__photo gallery__photo--p1">
+                        <img src="./images/about-2.jpg" alt="Photo 2" class="gallery__photo gallery__photo--p2">
+                        <img src="./images/about-3.jpg" alt="Photo 3" class="gallery__photo gallery__photo--p3">
+                    </div>
+                </div>
             </div>
+            
+                <div class="carousel" data-gap="20" data-bfc>
+                    <figure>
+                        <img src="https://source.unsplash.com/bjhrzvzZeq4/800x533" alt="">
+                        <img src="https://source.unsplash.com/EbuaKnSm8Zw/800x533" alt="">
+                        <img src="https://source.unsplash.com/kG38b7CFzTY/800x533" alt="">
+                        <img src="https://source.unsplash.com/nvzvOPQW0gc/800x533" alt="">
+                        <img src="https://source.unsplash.com/mCg0ZgD7BgU/800x533" alt="">
+                        <img src="https://source.unsplash.com/VkwRmha1_tI/800x533" alt="">
+                        <img src="https://source.unsplash.com/1FWICvPQdkY/800x533" alt="">
+                        <img src="https://source.unsplash.com/7mUXaBBrhoA/800x533" alt="">
+                    </figure>
+                    <nav>
+                        <button class="nav prev btn btn--primary btn--md">Forrige</button>
+                        <button class="nav next btn btn--secondary btn--md">Neste</button>
+                    </nav>
+                </div>
+            
         </main>
     </div>
 
@@ -102,7 +123,7 @@
     </footer>
     
     <!-- JS: -->
-    <script src="./js/index.js" type="module"></script>
+    <script src="./js/about.js" type="module"></script>
     </body>
     
     </html>
