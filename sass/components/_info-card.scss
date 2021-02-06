@@ -3,6 +3,8 @@
     padding: 3rem 1.5rem;
     border-radius: 3px;
     transition: all .4s;
+    justify-content: center;
+    display: block;
 
     &:not(:last-child) {
         margin-right: 5rem;

@@ -4,6 +4,7 @@
     background: $color-white;
     margin: 1.5rem;
     transition: all .4s;
+    border-radius: $border-radius-default;
 
     &:hover {
         transform: translateY(-3rem) scale(1.05);
