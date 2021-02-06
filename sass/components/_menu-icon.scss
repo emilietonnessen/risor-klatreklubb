@@ -1,7 +1,7 @@
 .menu-icon {
-    @media (min-width: $width-tablet-horizontal) {
+    @include respond(tab-land) {
         display: none;
-    }
+    } 
     
     padding: 0;
     z-index: 9999999999;
