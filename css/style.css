@@ -198,11 +198,27 @@ body {
   margin-bottom: 6rem;
 }
 
+.u-margin-bottom-md {
+  margin-bottom: 3rem;
+}
+
 .u-margin-top-lg {
   margin-top: 6rem;
 }
 
-.btn:link, .btn:visited {
+.u-padding-top-xl {
+  padding-top: 10rem;
+}
+
+.u-padding-top-lg {
+  padding-top: 6rem;
+}
+
+.u-text-align-left {
+  text-align: left !important;
+}
+
+.btn, .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   font-weight: 400;
@@ -214,9 +230,12 @@ body {
   position: relative;
   -webkit-transition: all .2s;
   transition: all .2s;
+  border-radius: 3px;
+  line-height: inherit;
+  border-width: 0;
 }
 
-.btn:link i, .btn:visited i {
+.btn i, .btn:link i, .btn:visited i {
   margin-left: 5px;
 }
 
@@ -225,6 +244,7 @@ body {
           transform: translateY(-0.5rem) scale(1.02);
   -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
           box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
 .btn:active {
@@ -249,26 +269,52 @@ body {
   color: #000000;
 }
 
-.btn--cta:link, .btn--cta:visited {
+.btn--cta, .btn--cta:link, .btn--cta:visited {
   padding: 2rem 3rem;
   font-size: 1.8rem;
   border-radius: 50px;
   font-weight: 400;
 }
 
-.btn--cta:link:hover, .btn--cta:visited:hover {
+.btn--cta:hover, .btn--cta:link:hover, .btn--cta:visited:hover {
   -webkit-transform: translateY(-0.5rem) scale(1.06);
           transform: translateY(-0.5rem) scale(1.06);
 }
 
-.btn--cta:link:active, .btn--cta:visited:active {
+.btn--cta:active, .btn--cta:link:active, .btn--cta:visited:active {
   -webkit-transform: translateY(0.5rem) scale(1);
           transform: translateY(0.5rem) scale(1);
 }
 
-.btn--lg:link, .btn--lg:visited {
+.btn--lg, .btn--lg:link, .btn--lg:visited {
   padding: 1rem 2rem;
   border-radius: 3px;
+}
+
+.btn--md, .btn--md {
+  padding: 0rem 2rem;
+  border-radius: 3px;
+}
+
+.link, .link:link, .link:visited {
+  color: #FFFFFF;
+}
+
+.link:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.submit[type="submit"] {
+  outline: 0;
+  border: 0;
+  background-color: #0581E8;
+  padding: 1rem 3rem;
+  color: #FFFFFF;
+  font-size: 1.8rem;
+  border-radius: 3px;
+  -webkit-transition: all .2s;
+  transition: all .2s;
 }
 
 .menu-icon {
@@ -499,8 +545,8 @@ body {
 
 .price-card {
   position: relative;
-  -webkit-box-shadow: 0rem 1.2rem 4rem rgba(0, 0, 0, 0.15);
-          box-shadow: 0rem 1.2rem 4rem rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0rem 0.8rem 3rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0rem 0.8rem 3rem rgba(0, 0, 0, 0.15);
   background: #FFFFFF;
   margin: 1.5rem;
   -webkit-transition: all .4s;
@@ -526,23 +572,23 @@ body {
 }
 
 .price-card__img--1 {
-  background-image: url("../images/city.jpg"), -webkit-gradient(linear, left top, right bottom, from(#F9E356), to(#D96D0F));
-  background-image: url("../images/city.jpg"), linear-gradient(to right bottom, #F9E356, #D96D0F);
+  background-image: url("../images/risor-1-sm.jpg"), -webkit-gradient(linear, left top, right bottom, from(#F9E356), to(#D96D0F));
+  background-image: url("../images/risor-1-sm.jpg"), linear-gradient(to right bottom, #F9E356, #D96D0F);
 }
 
 .price-card__img--2 {
-  background-image: url("../images/krana.jpg"), -webkit-gradient(linear, left top, right bottom, from(#F95667), to(#B10A7F));
-  background-image: url("../images/krana.jpg"), linear-gradient(to right bottom, #F95667, #B10A7F);
+  background-image: url("../images/risor-3-sm.jpg"), -webkit-gradient(linear, left top, right bottom, from(#F95667), to(#B10A7F));
+  background-image: url("../images/risor-3-sm.jpg"), linear-gradient(to right bottom, #F95667, #B10A7F);
 }
 
 .price-card__img--3 {
-  background-image: url("../images/contact.jpg"), -webkit-gradient(linear, left top, right bottom, from(#0581E8), to(#033474));
-  background-image: url("../images/contact.jpg"), linear-gradient(to right bottom, #0581E8, #033474);
+  background-image: url("../images/risor-4-sm.jpg"), -webkit-gradient(linear, left top, right bottom, from(#0581E8), to(#033474));
+  background-image: url("../images/risor-4-sm.jpg"), linear-gradient(to right bottom, #0581E8, #033474);
 }
 
 .price-card__img--4 {
-  background-image: url("../images/tablet5.jpg"), -webkit-gradient(linear, left top, right bottom, from(#56F9E8), to(#14A736));
-  background-image: url("../images/tablet5.jpg"), linear-gradient(to right bottom, #56F9E8, #14A736);
+  background-image: url("../images/risor-2-sm.jpg"), -webkit-gradient(linear, left top, right bottom, from(#56F9E8), to(#14A736));
+  background-image: url("../images/risor-2-sm.jpg"), linear-gradient(to right bottom, #56F9E8, #14A736);
 }
 
 .price-card__heading {
@@ -632,6 +678,151 @@ body {
 
 .info-card__heading {
   margin-bottom: 1.5rem;
+}
+
+.form {
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  padding: 3rem;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.form__box:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.form__input, .form__textarea {
+  height: 3.5rem;
+  padding: 1rem .8rem;
+  outline: 0;
+  border: 0;
+  background-color: transparent;
+  border-bottom: 1px solid #0581E8;
+  width: 50%;
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  -webkit-transition: ease-out .3s;
+  transition: ease-out .3s;
+  padding-bottom: 5px;
+  background: -webkit-gradient(linear, left top, right top, from(#0581e8), to(#033474)) left bottom transparent no-repeat;
+  background: linear-gradient(to right, #0581e8 0%, #033474 100%) left bottom transparent no-repeat;
+  background-size: 100% 1px;
+}
+
+.form__input::-webkit-input-placeholder, .form__textarea::-webkit-input-placeholder {
+  color: #033474;
+  font-family: montserrat, sans-serif;
+}
+
+.form__input:-ms-input-placeholder, .form__textarea:-ms-input-placeholder {
+  color: #033474;
+  font-family: montserrat, sans-serif;
+}
+
+.form__input::-ms-input-placeholder, .form__textarea::-ms-input-placeholder {
+  color: #033474;
+  font-family: montserrat, sans-serif;
+}
+
+.form__input::placeholder, .form__textarea::placeholder {
+  color: #033474;
+  font-family: montserrat, sans-serif;
+}
+
+.form__input:focus, .form__input:hover, .form__textarea:focus, .form__textarea:hover {
+  -webkit-transform: scaleX(1.1);
+          transform: scaleX(1.1);
+}
+
+.form__textarea {
+  height: 10rem;
+  width: 100%;
+  padding-bottom: 5px;
+  background: -webkit-gradient(linear, left top, right top, from(#0581e8), to(#033474)) left bottom rgba(238, 238, 238, 0.3) no-repeat;
+  background: linear-gradient(to right, #0581e8 0%, #033474 100%) left bottom rgba(238, 238, 238, 0.3) no-repeat;
+  background-size: 100% 1px;
+}
+
+.form__textarea:focus, .form__textarea:hover {
+  -webkit-transform: scaleY(1.1);
+          transform: scaleY(1.1);
+}
+
+.form__error {
+  color: #960000;
+  font-weight: 500;
+  padding-top: .5rem;
+  display: none;
+}
+
+.carousel {
+  padding: 20px;
+  -webkit-perspective: 500px;
+          perspective: 500px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.carousel > * {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+
+.carousel figure {
+  margin: 0;
+  width: 40%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.carousel figure img {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 0px;
+}
+
+.carousel figure img:not(:first-of-type) {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.carousel nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 20px 0 0;
+}
+
+.carousel nav button {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  padding: 1rem 2rem;
+}
+
+.carousel nav button:not(:last-child) {
+  margin-right: 2rem;
 }
 
 .nav__logo-container {
@@ -733,7 +924,7 @@ body {
 }
 
 .nav__link:visited, .nav__link:link {
-  padding: 1rem 3rem;
+  padding: 1.5rem 3rem;
   text-decoration: none;
   text-transform: uppercase;
   line-height: 6rem;
@@ -779,6 +970,7 @@ body {
   padding: 1rem;
   text-align: center;
   font-size: 1.4rem;
+  display: block;
 }
 
 .header {
@@ -961,5 +1153,67 @@ body {
   width: 1300px;
   margin: 0 auto;
   padding: 15rem 0;
+}
+
+.contact-main {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(38, 154, 250, 0.9)), to(rgba(2, 30, 66, 0.9))), url("../../images/about-1.jpg");
+  background-image: linear-gradient(to bottom right, rgba(38, 154, 250, 0.9), rgba(2, 30, 66, 0.9)), url("../../images/about-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0% 50%;
+  width: 100vw;
+  height: 70vh;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  position: relative;
+  display: block;
+}
+
+.section-contact {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 3fr;
+      grid-template-columns: 1fr 3fr;
+  width: 1300px;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 3px;
+}
+
+.contact-info {
+  background-color: rgba(3, 52, 116, 0.5);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  display: inline-block;
+  padding: 3rem;
+  color: #FFFFFF;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.contact-info__title:not(:first-child) {
+  margin-top: 3rem;
+}
+
+.about {
+  padding-bottom: 20rem;
+}
+
+.about__hover-gallery {
+  margin-top: 2rem;
+}
+
+.grid-gallery {
+  display: -ms-grid;
+  display: grid;
+}
+
+gri
+.grid-gallery__img {
+  max-width: 25%;
 }
 /*# sourceMappingURL=style.css.map */
