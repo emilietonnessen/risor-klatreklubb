@@ -67,7 +67,7 @@
             transform: translateY(0.5rem) scale(1);
         }
 
-        @media (min-width: $width-tablet-horizontal) {
+        @include respond(tab-land) {
             padding: 2rem 3rem;
             font-size: 1.8rem;
             border-radius: 50px;
