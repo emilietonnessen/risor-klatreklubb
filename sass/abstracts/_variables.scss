@@ -15,6 +15,7 @@ $color-darken: 10;
 // Grid
 $grid-width: 114rem;
 $gutter-vertical: 8rem;
+$gutter-vertical-small: 6rem;
 $gutter-horizontal: 6rem;
 
 // Font Sizes
@@ -27,8 +28,8 @@ $font-nav: termina, sans-serif;
 
 // Media Query
 $width-mobile: 576px;
-$width-tablet-vertical: 768px;
-$width-tablet-horizontal: 992px;
+$width-tablet-portrait: 768px;
+$width-tablet-landscape: 992px;
 $width-laptop: 1200px;
 $width-laptop-large: 1400px;
 $width-desktop: 1920px;
@@ -37,7 +38,12 @@ $width-widescreen: 3440px;
 
 // Add Box shadow properties
 $boxshadow-default: 0rem .8rem 3rem rgba($color-black, .15);
+$boxshadow-dark: 0rem .8rem 3rem rgba($color-black, .4);
+
 $boxshadow-hover: 0rem 1.2rem 6rem rgba($color-black, .15);
 $boxshadow-active: 0rem 1.2rem 2rem rgba($color-black, .15);
 
 $boxshadow-nav: 0rem 1.5rem 2rem rgba($color-black, .04);
+
+// Border Radius
+$border-radius-default: 3px;
