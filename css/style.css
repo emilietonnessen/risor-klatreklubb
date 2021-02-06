@@ -270,8 +270,8 @@ body {
 }
 
 .btn--cta, .btn--cta:link, .btn--cta:visited {
-  padding: 2rem 3rem;
-  font-size: 1.8rem;
+  padding: 1rem 1.5rem;
+  font-size: 1.2rem;
   border-radius: 50px;
   font-weight: 400;
 }
@@ -284,6 +284,15 @@ body {
 .btn--cta:active, .btn--cta:link:active, .btn--cta:visited:active {
   -webkit-transform: translateY(0.5rem) scale(1);
           transform: translateY(0.5rem) scale(1);
+}
+
+@media (min-width: 992px) {
+  .btn--cta, .btn--cta:link, .btn--cta:visited {
+    padding: 2rem 3rem;
+    font-size: 1.8rem;
+    border-radius: 50px;
+    font-weight: 400;
+  }
 }
 
 .btn--lg, .btn--lg:link, .btn--lg:visited {
@@ -430,21 +439,25 @@ body {
   background-image: linear-gradient(to bottom right, rgba(38, 154, 250, 0.9), rgba(2, 30, 66, 0.9)), url("../../images/jumbotron.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 50% 50%;
+  background-position: center;
   width: 100vw;
-  height: 60vh;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   position: relative;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  display: block;
+  height: 80vh;
+}
+
+@media (min-width: 1400px) {
+  .hero {
+    height: 60vh;
+  }
 }
 
 .hero__content {
-  display: block;
-  width: 100%;
   padding: clamp(1.5rem, 2vw, 5rem);
-  border-radius: 3px;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   position: absolute;
@@ -463,28 +476,46 @@ body {
 
 .hero__headline--primary {
   display: block;
-  font-size: 7rem;
-  letter-spacing: 8px;
-  line-height: 7rem;
   -webkit-animation-name: moveInLeft;
           animation-name: moveInLeft;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
   -webkit-animation-timing-function: ease-out;
           animation-timing-function: ease-out;
+  font-size: 5rem;
+  line-height: 7rem;
+  letter-spacing: 2px;
+}
+
+@media (min-width: 1400px) {
+  .hero__headline--primary {
+    font-size: 7rem;
+    line-height: 7rem;
+    letter-spacing: 8px;
+  }
 }
 
 .hero__headline--sub {
   display: block;
-  font-size: 2.5rem;
-  letter-spacing: 13px;
-  line-height: 7rem;
   -webkit-animation-name: moveInRight;
           animation-name: moveInRight;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
   -webkit-animation-timing-function: ease-out;
           animation-timing-function: ease-out;
+  font-size: 1.4rem;
+  letter-spacing: 1.4px;
+  line-height: 2rem;
+  margin-top: 2rem;
+}
+
+@media (min-width: 1400px) {
+  .hero__headline--sub {
+    margin-top: 0;
+    font-size: 2.5rem;
+    letter-spacing: 13px;
+    line-height: 7rem;
+  }
 }
 
 .hero__text {
@@ -823,6 +854,10 @@ body {
 
 .carousel nav button:not(:last-child) {
   margin-right: 2rem;
+}
+
+.nav {
+  display: block;
 }
 
 .nav__logo-container {
