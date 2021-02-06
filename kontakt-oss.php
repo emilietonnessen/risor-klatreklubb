@@ -154,6 +154,6 @@
     </footer>
     
     <!-- JS: -->
-    <script src="./js/index.js" type="module"></script>
+    <script src="./js/contact.js" type="module"></script>
     </body>
     </html>
