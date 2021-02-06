@@ -17,6 +17,8 @@
 @import "./components/gallery";
 @import "./components/price-card";
 @import "./components/info-card";
+@import "./components/form";
+@import "./components/carousel";
 
 // Layout
 @import "./layout/nav";
@@ -27,3 +29,5 @@
 // Pages
 @import "./pages/home";
 @import "./pages/info";
+@import "./pages/contact";
+@import "./pages/about";
