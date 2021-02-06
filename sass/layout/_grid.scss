@@ -18,7 +18,10 @@
     @include clearfix;
 
     [class^="col-"] {
-        width: 100% !important;
+        @media (max-width: $width-tablet-portrait) {
+            width: 100% !important;
+        }
+        
         
 
         &:not(:last-child) {
