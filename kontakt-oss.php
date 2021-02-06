@@ -21,8 +21,6 @@
     header("Location: https://www.tonnessen.com/projects/ongoing/risor-klatreklubb/kontakt-oss.html?mail-sent");
 ?>
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -90,46 +88,65 @@
             </div>
         </nav>
 
-        <!-- Header: -->
-        <header class="header">
-            <h1 class="header__headline-primary">Alt du trenger for å besøke oss</h1>
-        </header>
-
         <!-- Main Content: -->
-        <main>
-            <div class="container">
-                <div class="form__container">
-                    <form action="contact-form-handler.php" method="post" id="contact-form" class="form row">
-                        <div class=" col-sm-12 col-md-6 col-lg-6">
-                            <label for="first-name" class="form__label">Fornavn:</label>
-                            <input name="first-name" id="first-name" type="text" class="form-control form__input" placeholder="Fornavn..." required>
-                        </div>
-                        <div class=" col-sm-12 col-md-6 col-lg-6">
-                            <label class="form__label" for="last-name">Etternavn:</label>
-                            <input name="last-name" id="last-name" type="text" class="form-control form__input" placeholder="Etternavn..." required>
-                        </div>
-                        <div class=" col-sm-12 col-md-6 col-lg-6">
-                            <label class="form__label" for="email">Email:</label>
-                            <input name="email" id="email" type="email" class="form-control form__input" placeholder="Email..." required>
-                        </div>
-                        <div class=" col-sm-12 col-md-6 col-lg-6">
-                            <label class="form__label" for="topic">Emne:</label>
-                            <input name="topic" type="text" class="form-control form__input" placeholder="Emne..." required>
-                        </div>
-                        <div class=" col-12">
-                            <label class="form__label" for="meessage">Melding:</label>
-                            <textarea name="message" id="message form-control" class="form__textarea" placeholder="Hva kan vi hjelpe deg med?..." required></textarea>
-                        </div>
-                        <div class="col-12" align="center">
-                            <input name="submit" type="submit" class="form-control submit form__submit" value="SEND">
-                        </div>
-                    </form>
+        <main class="contact-main">
+            <section class="section-contact">
+                <div class="contact-info">
+                    <h4 class="contact-info__title">Adresse</h4>
+                    <p>Caspersens vei 25</p>
+                    <p>4950 Risør</p>
+                    <h4 class="contact-info__title">Email</h4>
+                    <a class="link" href="mailto:test@test.com">risorklatreklubb@gmail.com </a>
+                    <h4 class="contact-info__title">Åpningstider</h4>
+                    <p class="">
+                        Mandag <span class="">19:15 - 21:00</span>
+                    </p>
+                    <p class="">
+                        Fredag <span class="">18:00 - 21:00</span>
+                    </p>
+                    <p class="">
+                        Søndag <span class="">17:00 - 20:00</span>
+                    </p>
                 </div>
-            </div>
+                <form action="./kontakt-oss.php" method="post" id="contact-form" class="form">
+                    <div class="feedback"></div>
+                    <div class="form__box">
+                        <input name="first-name" id="first-name" type="text" class="form__input" placeholder="Kari">
+                        <div class="form__error form__error--first-name">
+                            <i class="fal fa-exclamation-triangle"></i> Skriv inn fornavnet ditt
+                        </div>
+                    </div>
+                    <div class="form__box">
+                        <input name="last-name" id="last-name" type="text" class="form__input" placeholder="Nordmann">
+                        <div class="form__error form__error--last-name">
+                            <i class="fal fa-exclamation-triangle"></i> Skriv inn etternavnet ditt
+                        </div>
+                    </div>
+                    <div class="form__box">
+                        <input name="email" id="email" type="email" class="form__input" placeholder="kari@nordmann.no">
+                        <div class="form__error form__error--email">
+                            <i class="fal fa-exclamation-triangle"></i> Skriv inn en gyldig email adresse
+                        </div>
+                    </div>
+                    <div class="form__box">
+                        <input name="topic" type="text" class="form__input" placeholder="Emne...">
+                        <div class="form__error form__error--topic">
+                            <i class="fal fa-exclamation-triangle"></i> Skriv hva meldingen handler om
+                        </div>
+                    </div>
+                    <div class="form__box">
+                        <textarea name="message" id="message" class="form__textarea" placeholder="Skriv din melding her..."></textarea>
+                        <div class="form__error form__error--message">
+                            <i class="fal fa-exclamation-triangle"></i> Skriv mer enn 5 bokstaver
+                        </div>
+                    </div>
+                    <div class="form__box">
+                        <input name="submit" type="submit" class="submit form__submit btn" value="SEND">
+                    </div>
+                </form>
+            </section>
         </main>
     </div>
-
-
 
     <!-- Footer: -->
     <footer class="footer">
@@ -139,5 +156,4 @@
     <!-- JS: -->
     <script src="./js/index.js" type="module"></script>
     </body>
-    
     </html>
