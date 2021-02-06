@@ -1,0 +1,68 @@
+.form {
+    background-color: rgba($color-white, .6);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    padding: 3rem;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+
+    &__box {
+        &:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__input,
+    &__textarea {
+        height: 3.5rem;
+        padding: 1rem .8rem;
+        outline: 0;
+        border: 0;
+        background-color: transparent;
+        border-bottom: 1px solid colors(secondary);
+        width: 50%;
+        transform-origin: bottom left;
+        transition: ease-out .3s;
+        padding-bottom: 5px;
+        background:
+            linear-gradient(to right, rgba(colors(secondary), 1) 0%, rgba(colors(primary), 1) 100%)
+            left 
+            bottom
+            transparent  
+            no-repeat; 
+        background-size: 100% 1px ;
+
+        &::placeholder {
+            color: colors(primary);
+            font-family: $font-body;
+        }
+
+        &:focus, &:hover {
+            transform: scaleX(1.1);
+        }
+    }
+
+    &__textarea {
+        height: 10rem;
+        width: 100%;
+        padding-bottom: 5px;
+        background:
+            linear-gradient(to right, rgba(colors(secondary), 1) 0%, rgba(colors(primary), 1) 100%)
+            left 
+            bottom
+            rgba(colors(grey, light), .3)  
+            no-repeat; 
+        background-size: 100% 1px ;
+
+        &:focus, &:hover {
+            transform: scaleY(1.1);
+        }
+    }
+
+    &__error {
+        color: colors(error, dark);
+        font-weight: 500;
+        padding-top: .5rem;
+        display: none;
+    }
+}
