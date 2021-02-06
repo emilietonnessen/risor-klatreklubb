@@ -23,27 +23,28 @@
 
         &--1 {
             background-image: 
-                url("../images/city.jpg"), 
+                url("../images/risor-1-sm.jpg"),
                 linear-gradient(to right bottom, #F9E356, #D96D0F);
         }
-
+ 
         &--2 {
             background-image: 
-                url("../images/krana.jpg"), 
+                url("../images/risor-3-sm.jpg"),  
                 linear-gradient(to right bottom, #F95667, #B10A7F);
         }
 
-        &--3 {
+        
+         &--3 {
             background-image: 
-                url("../images/contact.jpg"), 
+                url("../images/risor-4-sm.jpg"), 
                 linear-gradient(to right bottom, colors(secondary), colors(primary));
-        }
+        } 
 
         &--4 {
             background-image: 
-                url("../images/tablet5.jpg"), 
+                url("../images/risor-2-sm.jpg"), 
                 linear-gradient(to right bottom, #56F9E8, #14A736);
-        }
+        } 
     }
 
     &__heading {
