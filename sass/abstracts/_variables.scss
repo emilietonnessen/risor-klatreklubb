@@ -12,12 +12,6 @@ $color-error: #C90000;
 $color-lighten: 10;
 $color-darken: 10;
 
-// Grid
-$grid-width: 114rem;
-$gutter-vertical: 8rem;
-$gutter-vertical-small: 6rem;
-$gutter-horizontal: 6rem;
-
 // Font Sizes
 $default-fontsize: 1.6rem;
 
@@ -26,9 +20,15 @@ $font-body: montserrat, sans-serif;
 $font-heading: sofia-pro, sans-serif;
 $font-nav: termina, sans-serif;
 
+// Grid
+$grid-width: 114rem;
+$gutter-vertical: 8rem;
+$gutter-vertical-small: 6rem;
+$gutter-horizontal: 3rem;
+
 // Media Query
 $width-mobile: 576px;
-$width-tablet-portrait: 768px;
+$width-tablet-portrait: 767px;
 $width-tablet-landscape: 992px;
 $width-laptop: 1200px;
 $width-laptop-large: 1400px;
@@ -36,7 +36,7 @@ $width-desktop: 1920px;
 $width-desktop-large: 2560px;
 $width-widescreen: 3440px;
 
-// Add Box shadow properties
+// Box Shadow
 $boxshadow-default: 0rem .8rem 3rem rgba($color-black, .15);
 $boxshadow-dark: 0rem .8rem 3rem rgba($color-black, .4);
 
