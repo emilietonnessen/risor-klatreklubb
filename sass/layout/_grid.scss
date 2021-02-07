@@ -25,12 +25,19 @@
         
         
         
-
+        // 4 col layout
         &:not(:last-child) {
             margin-right: 0;
-                margin-bottom: $gutter-vertical-small;
+            margin-bottom: $gutter-vertical-small;
 
-            @include respond(tab-land) {
+            @include respond(lap) {
+                margin-right: $gutter-horizontal;
+            }
+        }
+
+        // 2 col layout
+        &:not(:nth-child(even)) {
+            @include respond(tab-port) {
                 margin-right: $gutter-horizontal;
             }
         }
@@ -58,6 +65,10 @@
 
         @include respond(tab-port) {
             width: calc((100% - #{$gutter-horizontal}) / 2);
+        }
+
+        @include respond(lap) {
+            width: calc((100% - 3 * #{$gutter-horizontal}) / 4);
         }
     }
 
