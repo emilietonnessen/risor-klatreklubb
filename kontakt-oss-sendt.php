@@ -66,7 +66,7 @@
         <!-- Navigation: -->
         <nav class="nav">
             <div class="nav__logo-container">
-                <a href="./index.html">
+                <a href="https://www.tonnessen.com/projects/risor-klatreklubb/">
                     <img src="./images/logo.png" alt="Risør Klatreklubb Logo" class="nav__logo">
                 </a>
             </div>
@@ -78,13 +78,13 @@
             </div>
             <div class="nav__menu">
                 <ul class="nav__list">
-                    <a class="nav__link" href="./index.html">
+                    <a class="nav__link" href="https://www.tonnessen.com/projects/risor-klatreklubb/">
                         <li>Hjem</li>
                     </a>
                     <a class="nav__link" href="./informasjon.html">
                         <li>Informasjon</li>
                     </a>
-                    <a class="nav__link" href="./kontakt-oss.html">
+                    <a class="nav__link nav__link--active" href="./kontakt-oss.html">
                         <li>Kontakt Oss</li>
                     </a>
                     <a class="nav__link" href="./om-oss.html">
@@ -118,7 +118,15 @@
                     </p>
                 </div>
                 <form action="https://www.tonnessen.com/projects/risor-klatreklubb/kontakt-oss-sendt" method="post" id="contact-form" class="form">
-                    <div class="feedback"></div>
+                    <div class="feedback u-margin-bottom-large">
+                        <?php
+                            if($message_sent){
+                                echo("<div class='feedback--success'>Takk for meldingen, vi vil kontakte deg så raskt vi kan!</div>");
+                            } else{
+                                echo("<div class='feedback--error'>Noe gikk galt, og meldingen ble desverre ikke sendt. Prøv på nytt.</div>");
+                            }
+                        ?>
+                    </div>
                     <div class="form__box">
                         <input name="first-name" id="first-name" type="text" class="form__input" placeholder="Kari" required>
                     </div>

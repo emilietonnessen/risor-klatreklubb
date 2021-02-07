@@ -1,6 +1,7 @@
 import { menuIcon, menu, body } from "./components/abstracts/variables.js";
 import mobileMenu from "./components/menu/mobileMenu.js";
 import displayCurrentYear from "./components/copyright/currentYear.js"
+import carousel from "./components/gallery/carousel.js";
 
 menuIcon.addEventListener("click", mobileMenu);
 
