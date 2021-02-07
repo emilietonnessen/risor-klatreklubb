@@ -61,8 +61,8 @@
             animation-timing-function: ease-out;
 
             //Mobile
-            font-size: 1.4rem;
-            letter-spacing: 1.4px;
+            font-size: clamp(1.4rem, 5vw, 1.8rem);
+            letter-spacing: clamp(1.4px, 5vw, 7px);
             line-height: 2rem;
             margin-top: 2rem;
 
