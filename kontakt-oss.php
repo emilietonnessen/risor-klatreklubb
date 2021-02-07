@@ -150,7 +150,7 @@
 
     <!-- Footer: -->
     <footer class="footer">
-        <span class="current-year">2021</span> © Risør Klatreklubb. All rights reserved
+        <span class="current-year"></span> © Risør Klatreklubb. All rights reserved
     </footer>
     
     <!-- JS: -->
