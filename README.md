@@ -20,5 +20,4 @@ https://www.facebook.com/risorklatreklubb
 - Copyright year must be a function and update automaticly 
 - Email validation on contact form
 - Working Email function
-- Responsive website (mobile, tablet, laptop, desktop and widescreen)
 - Testing on devices and different browsers (Chrome, Safari, Edge, IE)
