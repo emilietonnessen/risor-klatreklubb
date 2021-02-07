@@ -6,6 +6,14 @@
     transition: all .4s;
     border-radius: $border-radius-default;
 
+    @include respond(tab-port) {
+        height: 35rem;
+    }
+
+    @include respond(lap) {
+        height: 40rem;
+    }
+
     &:hover {
         transform: translateY(-3rem) scale(1.05);
     }
