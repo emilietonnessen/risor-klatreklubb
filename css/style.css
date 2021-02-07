@@ -775,6 +775,8 @@ body {
   padding: 3rem;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 
 .form__box:not(:last-child) {
