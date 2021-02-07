@@ -13,4 +13,3 @@ window.addEventListener('load', () => {
 		carousel(carousels[i]);
 	}
 });
-
