@@ -81,7 +81,7 @@
                     <a class="nav__link" href="./om-oss.html">
                         <li>Om Oss</li>
                     </a>
-                    <a href="#" class="nav__link">
+                    <a href="https://www.facebook.com/risorklatreklubb" target="_blank" rel="noopener noreferrer" class="nav__link">
                         <li class="btn btn--secondary btn--md"><i class="fab fa-facebook"></i> Facebook</li>
                     </a>
                 </ul>
