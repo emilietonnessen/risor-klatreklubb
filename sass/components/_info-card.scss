@@ -6,6 +6,14 @@
     justify-content: center;
     display: block;
 
+    @include respond(tab-port) {
+        height: 35rem;
+    }
+
+    @include respond(lap) {
+        height: 41rem;
+    }
+
     &:not(:last-child) {
         margin-right: 5rem;
     }
