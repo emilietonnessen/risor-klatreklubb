@@ -17,7 +17,4 @@ https://www.tonnessen.com/projects/risor-klatreklubb/
 https://www.facebook.com/risorklatreklubb 
 
 ## List of things that must be done:
-- Copyright year must be a function and update automaticly 
-- Email validation on contact form
-- Working Email function
 - Testing on devices and different browsers (Chrome, Safari, Edge, IE)
