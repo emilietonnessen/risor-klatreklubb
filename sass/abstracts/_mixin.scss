@@ -52,7 +52,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
         @media only screen and (min-width: $width-mobile) { @content };              // 576px
     }
     @if $breakpoint == tab-port {
-        @media only screen and (min-width: $width-tablet-portrait) { @content };     // 768px
+        @media only screen and (min-width: $width-tablet-portrait) { @content };     // 767px
     }
     @if $breakpoint == tab-land {
         @media only screen and (min-width: $width-tablet-landscape) { @content };    // 992px
