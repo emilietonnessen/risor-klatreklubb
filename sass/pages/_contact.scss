@@ -18,6 +18,7 @@
 .section-contact {
     display: grid;
     border-radius: $border-radius-default;
+    backface-visibility: hidden;
 
     // Mobile
     grid-template-columns: 1fr;

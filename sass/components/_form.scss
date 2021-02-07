@@ -19,19 +19,10 @@
         padding: 1rem .8rem;
         outline: 0;
         border: 0;
-        background-color: transparent;
-        border-bottom: 1px solid colors(secondary);
-        
-        transform-origin: bottom left;
-        transition: ease-out .3s;
-        padding-bottom: 5px;
-        background:
-            linear-gradient(to right, rgba(colors(secondary), 1) 0%, rgba(colors(primary), 1) 100%)
-            left 
-            bottom
-            transparent  
-            no-repeat; 
-        background-size: 100% 1px ;
+        background-color: rgba(colors(grey, light), .3);
+        border-bottom: 2px solid transparent;
+        transition: ease-in-out .3s;
+
 
         // Mobile
         width: 100%;
@@ -46,25 +37,13 @@
         }
 
         &:focus, &:hover {
-            transform: scaleX(1.1);
+            border-bottom: 2px solid colors(secondary);
         }
     }
 
     &__textarea {
         height: 10rem;
         width: 100%;
-        padding-bottom: 5px;
-        background:
-            linear-gradient(to right, rgba(colors(secondary), 1) 0%, rgba(colors(primary), 1) 100%)
-            left 
-            bottom
-            rgba(colors(grey, light), .3)  
-            no-repeat; 
-        background-size: 100% 1px ;
-
-        &:focus, &:hover {
-            transform: scaleY(1.1);
-        }
     }
 
     &__error {

@@ -833,16 +833,10 @@ body {
   padding: 1rem .8rem;
   outline: 0;
   border: 0;
-  background-color: transparent;
-  border-bottom: 1px solid #0581E8;
-  -webkit-transform-origin: bottom left;
-          transform-origin: bottom left;
-  -webkit-transition: ease-out .3s;
-  transition: ease-out .3s;
-  padding-bottom: 5px;
-  background: -webkit-gradient(linear, left top, right top, from(#0581e8), to(#033474)) left bottom transparent no-repeat;
-  background: linear-gradient(to right, #0581e8 0%, #033474 100%) left bottom transparent no-repeat;
-  background-size: 100% 1px;
+  background-color: rgba(238, 238, 238, 0.3);
+  border-bottom: 2px solid transparent;
+  -webkit-transition: ease-in-out .3s;
+  transition: ease-in-out .3s;
   width: 100%;
 }
 
@@ -873,22 +867,12 @@ body {
 }
 
 .form__input:focus, .form__input:hover, .form__textarea:focus, .form__textarea:hover {
-  -webkit-transform: scaleX(1.1);
-          transform: scaleX(1.1);
+  border-bottom: 2px solid #0581E8;
 }
 
 .form__textarea {
   height: 10rem;
   width: 100%;
-  padding-bottom: 5px;
-  background: -webkit-gradient(linear, left top, right top, from(#0581e8), to(#033474)) left bottom rgba(238, 238, 238, 0.3) no-repeat;
-  background: linear-gradient(to right, #0581e8 0%, #033474 100%) left bottom rgba(238, 238, 238, 0.3) no-repeat;
-  background-size: 100% 1px;
-}
-
-.form__textarea:focus, .form__textarea:hover {
-  -webkit-transform: scaleY(1.1);
-          transform: scaleY(1.1);
 }
 
 .form__error {
@@ -984,6 +968,36 @@ body {
 
 .carousel nav button:not(:last-child) {
   margin-right: 2rem;
+}
+
+.feedback {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.feedback--success {
+  background: #add8ad;
+  text-align: center;
+  padding: 15px;
+}
+
+.feedback--error {
+  background: #C90000;
+  color: white;
+  font-weight: 500;
+  margin: 0px 0 20px 0;
+  text-align: center;
+  padding: 15px;
+}
+
+.feedback--warning {
+  background: #cc7818;
+  color: white;
+  font-weight: 500;
+  margin: 20px 0 20px 0;
+  text-align: center;
+  padding: 15px;
 }
 
 .nav {
@@ -1440,6 +1454,8 @@ body {
   display: -ms-grid;
   display: grid;
   border-radius: 3px;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
   padding: 15rem 1.5rem;
