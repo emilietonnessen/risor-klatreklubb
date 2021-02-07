@@ -21,7 +21,7 @@
         border: 0;
         background-color: transparent;
         border-bottom: 1px solid colors(secondary);
-        width: 50%;
+        
         transform-origin: bottom left;
         transition: ease-out .3s;
         padding-bottom: 5px;
@@ -32,6 +32,13 @@
             transparent  
             no-repeat; 
         background-size: 100% 1px ;
+
+        // Mobile
+        width: 100%;
+
+        @include respond(tab-land) {
+            width: 50%;
+        }
 
         &::placeholder {
             color: colors(primary);

@@ -1,41 +1,56 @@
 .contact-main {
     background-image: 
-        linear-gradient(
-            to bottom right,
-            rgba(colors(secondary, light), 0.9), 
-            rgba(colors(primary, dark), 0.9)),
+        linear-gradient(to bottom right, rgba(colors(secondary, light), 0.9),  rgba(colors(primary, dark), 0.9)),
         url("../images/about-1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0% 50%;
     width: 100vw;
-    height: 70vh;
     backface-visibility: hidden;
     position: relative;
     display: block;
+
+    @include respond(tab-land) {
+        height: 70vh;
+    }
 }
 
 .section-contact {
     display: grid;
-    grid-template-columns: 1fr 3fr;
-    width: 1300px;
-    margin: 0 auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 3px;
+    border-radius: $border-radius-default;
+
+    // Mobile
+    grid-template-columns: 1fr;
+    padding: 15rem 1.5rem;
+
+    @include respond(tab-land) {
+        grid-template-columns: 1fr 3fr;
+        width: 1300px;
+        margin: 0 auto;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+    }
 }
 
 .contact-info {
     background-color: rgba(colors(primary), .5);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-    display: inline-block;
-    padding: 3rem;
     color: $color-white;
     border-top-left-radius: 3px;
-    border-bottom-left-radius: 3px;
+
+    // Mobile
+    padding: 1.5rem;
+    border-top-right-radius: 3px;
+
+    @include respond(tab-land) {
+        padding: 3rem;
+        display: inline-block;
+        border-bottom-left-radius: 3px;
+        border-top-right-radius: 0;
+    }
 
     &__title {
         &:not(:first-child){

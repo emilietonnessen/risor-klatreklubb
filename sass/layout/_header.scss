@@ -1,15 +1,16 @@
 .header {
-    width: $grid-width;
     margin: 0 auto; 
     display: block;
 
+    // Mobile
+    padding: 0 3rem;
+    
+
     @include respond(tab-land) {
-        padding: 0 3rem;
+        width: $grid-width;
     }
 
     &__headline {
-        
-
         &--primary {
             text-align: center;
             font-size: 4rem;
@@ -28,11 +29,13 @@
             color: $color-white;
             text-align: center;
             font-weight: 300;
-            font-size: 5rem;
-            letter-spacing: 20px;
             animation-name: moveInTop;
             animation-duration: 1s;
             animation-timing-function: ease-out;
+
+            // Mobile
+            font-size: clamp(2rem, 7.5vw, 7rem);
+            letter-spacing: clamp(1rem, 2vw, 3rem);
         }
     }
 }

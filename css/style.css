@@ -287,9 +287,9 @@ body {
 }
 
 .btn--cta, .btn--cta:link, .btn--cta:visited {
-  padding: 1rem 1.5rem;
-  font-size: 1.2rem;
-  border-radius: 50px;
+  padding: 1rem 2rem;
+  font-size: 1.4rem;
+  border-radius: 5rem;
   font-weight: 400;
 }
 
@@ -790,7 +790,6 @@ body {
   border: 0;
   background-color: transparent;
   border-bottom: 1px solid #0581E8;
-  width: 50%;
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
   -webkit-transition: ease-out .3s;
@@ -799,6 +798,13 @@ body {
   background: -webkit-gradient(linear, left top, right top, from(#0581e8), to(#033474)) left bottom transparent no-repeat;
   background: linear-gradient(to right, #0581e8 0%, #033474 100%) left bottom transparent no-repeat;
   background-size: 100% 1px;
+  width: 100%;
+}
+
+@media only screen and (min-width: 992px) {
+  .form__input, .form__textarea {
+    width: 50%;
+  }
 }
 
 .form__input::-webkit-input-placeholder, .form__textarea::-webkit-input-placeholder {
@@ -848,7 +854,7 @@ body {
 }
 
 .carousel {
-  padding: 20px;
+  padding: clamp(1.5rem, 2vw, 3rem);
   -webkit-perspective: 500px;
           perspective: 500px;
   overflow: hidden;
@@ -870,9 +876,23 @@ body {
           flex: 0 0 auto;
 }
 
+@media only screen and (min-width: 992px) {
+  .carousel {
+    -webkit-perspective: 500px;
+            perspective: 500px;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .carousel {
+    -webkit-perspective: 1000px;
+            perspective: 1000px;
+  }
+}
+
 .carousel figure {
   margin: 0;
-  width: 40%;
+  width: 90%;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
   -webkit-transition: -webkit-transform 0.5s;
@@ -881,11 +901,17 @@ body {
   transition: transform 0.5s, -webkit-transform 0.5s;
 }
 
+@media only screen and (min-width: 992px) {
+  .carousel figure {
+    width: 60%;
+  }
+}
+
 .carousel figure img {
   width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 0 0px;
+  padding: clamp(1rem, 2vw, 2rem) !important;
 }
 
 .carousel figure img:not(:first-of-type) {
@@ -1087,19 +1113,19 @@ body {
   color: #FFFFFF;
   padding: 1rem;
   text-align: center;
-  font-size: 1.4rem;
+  font-size: clamp(1rem, 2vw, 1.4rem);
   display: block;
 }
 
 .header {
-  width: 114rem;
   margin: 0 auto;
   display: block;
+  padding: 0 3rem;
 }
 
 @media only screen and (min-width: 992px) {
   .header {
-    padding: 0 3rem;
+    width: 114rem;
   }
 }
 
@@ -1116,14 +1142,14 @@ body {
   color: #FFFFFF;
   text-align: center;
   font-weight: 300;
-  font-size: 5rem;
-  letter-spacing: 20px;
   -webkit-animation-name: moveInTop;
           animation-name: moveInTop;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
   -webkit-animation-timing-function: ease-out;
           animation-timing-function: ease-out;
+  font-size: clamp(2rem, 7.5vw, 7rem);
+  letter-spacing: clamp(1rem, 2vw, 3rem);
 }
 
 .row {
@@ -1221,47 +1247,67 @@ body {
   padding: 10rem 0;
 }
 
+@media only screen and (min-width: 768px) {
+  .section-info {
+    padding: 20rem 0;
+  }
+}
+
 .section-info--header {
   text-align: center;
   background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(38, 154, 250, 0.9)), to(rgba(2, 30, 66, 0.9))), url("../images/contact-lg.jpg");
   background-image: linear-gradient(to bottom right, rgba(38, 154, 250, 0.9), rgba(2, 30, 66, 0.9)), url("../images/contact-lg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 50% 100%;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
-  padding: 15rem 0;
+  padding: 10rem 0;
+  background-position: 0% 50%;
+}
+
+@media only screen and (min-width: 992px) {
+  .section-info--header {
+    padding: 15rem 0;
+    background-position: 50% 100%;
+  }
 }
 
 .opening-hours {
   background-color: rgba(255, 255, 255, 0.8);
   display: inline-block;
-  padding: 1.5rem 3rem;
-  margin: 6rem 0 3rem 0;
   text-align: left;
   -webkit-transform: skewX(-10deg);
           transform: skewX(-10deg);
+  padding: 1rem 1.5rem;
+  margin: 6rem 0 3rem 0;
+}
+
+@media only screen and (min-width: 992px) {
+  .opening-hours {
+    padding: 1.5rem 3rem;
+    margin: 6rem 0 3rem 0;
+  }
 }
 
 .opening-hours__text {
-  padding: .7rem 2rem;
-  margin-bottom: 1rem;
   border-bottom: 1px solid #FFFFFF;
   -webkit-transform: skewX(10deg);
           transform: skewX(10deg);
+  padding: .5rem 1rem;
+  margin-bottom: 1rem;
+}
+
+@media only screen and (min-width: 992px) {
+  .opening-hours__text {
+    padding: .7rem 2rem;
+    margin-bottom: 1rem;
+  }
 }
 
 .opening-hours__time {
-  padding-left: 10rem;
+  padding-left: clamp(3rem, 10vw, 15rem);
   -webkit-transform: skewX(10deg);
           transform: skewX(10deg);
-}
-
-.info-btn {
-  -webkit-animation: moveInBottom .5s ease-out .75s;
-          animation: moveInBottom .5s ease-out .75s;
-  -webkit-animation-fill-mode: backwards;
-          animation-fill-mode: backwards;
 }
 
 .info-box {
@@ -1298,16 +1344,19 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 100%;
-  -webkit-clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
-  clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
-  padding: 15rem 0;
-  /*  &__grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        width: 1300px;
-        margin: 0 auto;
-        padding: 15rem 0;
-    } */
+  -webkit-clip-path: polygon(0 8%, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 8%, 100% 0, 100% 100%, 0 100%);
+  padding: 20rem 0;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+@media only screen and (min-width: 992px) {
+  .section-info-card {
+    -webkit-clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
+    padding: 15rem 0;
+  }
 }
 
 .contact-main {
@@ -1317,37 +1366,58 @@ body {
   background-size: cover;
   background-position: 0% 50%;
   width: 100vw;
-  height: 70vh;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   position: relative;
   display: block;
 }
 
+@media only screen and (min-width: 992px) {
+  .contact-main {
+    height: 70vh;
+  }
+}
+
 .section-contact {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 3fr;
-      grid-template-columns: 1fr 3fr;
-  width: 1300px;
-  margin: 0 auto;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
   border-radius: 3px;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  padding: 15rem 1.5rem;
+}
+
+@media only screen and (min-width: 992px) {
+  .section-contact {
+    -ms-grid-columns: 1fr 3fr;
+        grid-template-columns: 1fr 3fr;
+    width: 1300px;
+    margin: 0 auto;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
 }
 
 .contact-info {
   background-color: rgba(3, 52, 116, 0.5);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  display: inline-block;
-  padding: 3rem;
   color: #FFFFFF;
   border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
+  padding: 1.5rem;
+  border-top-right-radius: 3px;
+}
+
+@media only screen and (min-width: 992px) {
+  .contact-info {
+    padding: 3rem;
+    display: inline-block;
+    border-bottom-left-radius: 3px;
+    border-top-right-radius: 0;
+  }
 }
 
 .contact-info__title:not(:first-child) {
