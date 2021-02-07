@@ -3,8 +3,14 @@
     margin-top: 10rem;
     height: 20rem;
 
-    @include respond(tab-land) {
-        margin-top: -6rem;
+    @include respond(tab-port) {
+        margin-top: 0rem;
+        height: 40rem;
+    }
+
+    @include respond(lap) {
+        margin-top: -5rem;
+        margin-left: 2rem;
     }
 
     &__photo {
@@ -33,21 +39,31 @@
 
         &--p2 {
             right: 0;
-            top: 2rem;
+            top: clamp(2rem, 10vw, 5rem);
 
             @include respond(tab-land) {
-                right: -20rem;
-                top: 0rem;
+                right: -1rem;
+                top: 3rem;
+            }
+
+            @include respond(lap) {
+                right: -10rem;
+                top: 5rem;
             }
         }
 
         &--p3 {
             left: 4rem;
-            top: 8rem;
+            top: clamp(8rem, 20vw, 12rem);
 
             @include respond(tab-land) {
-                left: 20%;
-                top: 20rem;
+                left: 5rem;
+                top: 15rem;
+            }
+
+            @include respond(lap) {
+                left: 15%;
+                top: 18rem;
             }
         }
 
