@@ -1,24 +1,33 @@
 <?php
-    $firstName = $_POST['first-name'];
-    $lastName = $_POST['last-name'];
-    $topic = $_POST['topic'];
-    $email = $_POST['email'];
-    $messages = $_POST['message'];
 
-    $message = "<p><strong>Navn: </strong> $firstName $lastName</p>";
-    $message .= "<p><strong>Email: </strong> $email</p>" . "<br>";
-    $message .= "<p><strong>Melding: </strong>" . "<br>" . "$messages</p>";
-    
-    $to = "emilie@tonnessen.com";
-    $subject = "$topic \r\n";
+    $message_sent = false;
 
-    $mailheader = "Fra: $email \r\n";
-    $mailheader .= 'Content-type: text/html; charset=utf-8' . "\r\n";
+    if(isset($_POST['email']) && $_POST['email'] != ''){
 
-    // send email
-    mail($to, $subject, $message, $mailheader);
+        if( filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) ){
+            $firstName = $_POST['first-name'];
+            $lastName = $_POST['last-name'];
+            $userEmail = $_POST['email'];
+            $topic = $_POST['topic'];
+            $message = $_POST['message'];
 
-    header("Location: https://www.tonnessen.com/projects/ongoing/risor-klatreklubb/kontakt-oss.html?mail-sent");
+            $to = "emilie@tonnessen.com";
+            $subject = "$topic \r\n";
+            $body = "";
+
+            $body .= "<div><strong>From: </strong>" .$firstName. "</div>";
+            $body .= "<div><strong>Email: </strong>".$userEmail. "</div>";
+            $body .= "<div><strong>Message:</strong></div><p>".$message. "</p>";
+
+            $mailheader = "Fra: $email \r\n";
+            $mailheader .= 'Content-type: text/html; charset=utf-8' . "\r\n";
+        }
+
+        mail($to, $subject, $body, $mailheader);
+
+        $message_sent = true;
+    }
+
 ?>
 
 <!DOCTYPE html>
@@ -108,37 +117,22 @@
                         Søndag <span class="">17:00 - 20:00</span>
                     </p>
                 </div>
-                <form action="./kontakt-oss.php" method="post" id="contact-form" class="form">
+                <form action="https://www.tonnessen.com/projects/risor-klatreklubb/kontakt-oss-sendt" method="post" id="contact-form" class="form">
                     <div class="feedback"></div>
                     <div class="form__box">
-                        <input name="first-name" id="first-name" type="text" class="form__input" placeholder="Kari">
-                        <div class="form__error form__error--first-name">
-                            <i class="fal fa-exclamation-triangle"></i> Skriv inn fornavnet ditt
-                        </div>
+                        <input name="first-name" id="first-name" type="text" class="form__input" placeholder="Kari" required>
                     </div>
                     <div class="form__box">
-                        <input name="last-name" id="last-name" type="text" class="form__input" placeholder="Nordmann">
-                        <div class="form__error form__error--last-name">
-                            <i class="fal fa-exclamation-triangle"></i> Skriv inn etternavnet ditt
-                        </div>
+                        <input name="last-name" id="last-name" type="text" class="form__input" placeholder="Nordmann" required>
                     </div>
                     <div class="form__box">
-                        <input name="email" id="email" type="email" class="form__input" placeholder="kari@nordmann.no">
-                        <div class="form__error form__error--email">
-                            <i class="fal fa-exclamation-triangle"></i> Skriv inn en gyldig email adresse
-                        </div>
+                        <input name="email" id="email" type="email" class="form__input" placeholder="kari@nordmann.no" required>
                     </div>
                     <div class="form__box">
-                        <input name="topic" type="text" class="form__input" placeholder="Emne...">
-                        <div class="form__error form__error--topic">
-                            <i class="fal fa-exclamation-triangle"></i> Skriv hva meldingen handler om
-                        </div>
+                        <input name="topic" type="text" class="form__input" placeholder="Emne..." required>
                     </div>
                     <div class="form__box">
-                        <textarea name="message" id="message" class="form__textarea" placeholder="Skriv din melding her..."></textarea>
-                        <div class="form__error form__error--message">
-                            <i class="fal fa-exclamation-triangle"></i> Skriv mer enn 5 bokstaver
-                        </div>
+                        <textarea name="message" id="message" class="form__textarea" placeholder="Skriv din melding her..." required></textarea>
                     </div>
                     <div class="form__box">
                         <input name="submit" type="submit" class="submit form__submit btn" value="SEND">
@@ -155,5 +149,5 @@
     
     <!-- JS: -->
     <script src="./js/contact.js" type="module"></script>
-    </body>
-    </html>
+</body>
+</html>

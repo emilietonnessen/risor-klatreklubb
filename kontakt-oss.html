@@ -75,47 +75,32 @@
                     <h4 class="contact-info__title">Email</h4>
                     <a class="link" href="mailto:test@test.com">risorklatreklubb@gmail.com </a>
                     <h4 class="contact-info__title">Åpningstider</h4>
-                    <p class="">
-                        Mandag <span class="">19:15 - 21:00</span>
+                    <p>
+                        Mandag <span>19:15 - 21:00</span>
                     </p>
-                    <p class="">
-                        Fredag <span class="">18:00 - 21:00</span>
+                    <p>
+                        Fredag <span>18:00 - 21:00</span>
                     </p>
-                    <p class="">
-                        Søndag <span class="">17:00 - 20:00</span>
+                    <p>
+                        Søndag <span>17:00 - 20:00</span>
                     </p>
                 </div>
-                <form action="./kontakt-oss.php" method="post" id="contact-form" class="form">
+                <form action="https://www.tonnessen.com/projects/risor-klatreklubb/kontakt-oss-sendt" method="post" id="contact-form" class="form">
                     <div class="feedback"></div>
                     <div class="form__box">
-                        <input name="first-name" id="first-name" type="text" class="form__input" placeholder="Kari">
-                        <div class="form__error form__error--first-name">
-                            <i class="fal fa-exclamation-triangle"></i> Skriv inn fornavnet ditt
-                        </div>
+                        <input name="first-name" id="first-name" type="text" class="form__input" placeholder="Kari" required>
                     </div>
                     <div class="form__box">
-                        <input name="last-name" id="last-name" type="text" class="form__input" placeholder="Nordmann">
-                        <div class="form__error form__error--last-name">
-                            <i class="fal fa-exclamation-triangle"></i> Skriv inn etternavnet ditt
-                        </div>
+                        <input name="last-name" id="last-name" type="text" class="form__input" placeholder="Nordmann" required>
                     </div>
                     <div class="form__box">
-                        <input name="email" id="email" type="email" class="form__input" placeholder="kari@nordmann.no">
-                        <div class="form__error form__error--email">
-                            <i class="fal fa-exclamation-triangle"></i> Skriv inn en gyldig email adresse
-                        </div>
+                        <input name="email" id="email" type="email" class="form__input" placeholder="kari@nordmann.no" required>
                     </div>
                     <div class="form__box">
-                        <input name="topic" type="text" class="form__input" placeholder="Emne...">
-                        <div class="form__error form__error--topic">
-                            <i class="fal fa-exclamation-triangle"></i> Skriv hva meldingen handler om
-                        </div>
+                        <input name="topic" type="text" class="form__input" placeholder="Emne..." required>
                     </div>
                     <div class="form__box">
-                        <textarea name="message" id="message" class="form__textarea" placeholder="Skriv din melding her..."></textarea>
-                        <div class="form__error form__error--message">
-                            <i class="fal fa-exclamation-triangle"></i> Skriv mer enn 5 bokstaver
-                        </div>
+                        <textarea name="message" id="message" class="form__textarea" placeholder="Skriv din melding her..." required></textarea>
                     </div>
                     <div class="form__box">
                         <input name="submit" type="submit" class="submit form__submit btn" value="SEND">
