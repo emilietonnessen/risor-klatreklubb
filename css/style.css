@@ -1200,6 +1200,12 @@ body {
   padding: 0 3rem;
 }
 
+@media only screen and (min-width: 1200px) {
+  .header {
+    width: 114rem;
+  }
+}
+
 .header__headline--primary {
   text-align: center;
   font-size: 4rem;
