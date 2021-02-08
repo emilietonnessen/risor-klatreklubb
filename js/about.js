@@ -7,6 +7,27 @@ menuIcon.addEventListener("click", mobileMenu);
 
 displayCurrentYear();
 
+
+// IOS
+const iOS = false;
+const appleDevices = ['iPad', 'iPhone', 'iPod'];
+const sectionCarousel = document.querySelector(".section-carousel");
+
+if (appleDevices.indexOf(navigator.platform) > -1) {
+    iOS = true;
+} 
+
+
+
+if (appleDevices === true) {
+	console.log("iOS is true")
+	sectionCarousel.style.display = "none";
+} else {
+	console.log("iOS is false")
+}
+
+
+
 window.addEventListener('load', () => {
 	var carousels = document.querySelectorAll('.carousel');
 
