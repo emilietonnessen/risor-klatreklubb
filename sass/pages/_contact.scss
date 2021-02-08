@@ -26,7 +26,7 @@
 
     @include respond(tab-land) {
         grid-template-columns: 1fr 3fr;
-        width: clamp(90rem, 60vw, 130rem);
+        width: clamp(90rem, 90vw, 130rem);
         margin: 0 auto;
         transform: translate(-50%, -50%);
         position: absolute;
