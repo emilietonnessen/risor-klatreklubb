@@ -6,9 +6,7 @@
     padding: 0 3rem;
     
 
-    @include respond(tab-land) {
-        width: $grid-width;
-    }
+    
 
     &__headline {
         &--primary {
@@ -34,8 +32,16 @@
             animation-timing-function: ease-out;
 
             // Mobile
-            font-size: clamp(2rem, 7.5vw, 7rem);
+            font-size: 2.5rem;
             letter-spacing: clamp(1rem, 2vw, 3rem);
+
+            @include respond(mobile) {
+                font-size: 5rem;
+            }
+
+            @include respond(tab-land) {
+                font-size: 7rem;
+            }
         }
     }
 }
