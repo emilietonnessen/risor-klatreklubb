@@ -8,13 +8,10 @@ I've previously created their logo which they are currently using.
 - CSS
 - SASS
 - JavaScript
-- PHP
+- PHP (Email Function)
 
 ## Live Test Site:
 https://www.tonnessen.com/projects/risor-klatreklubb/
 
 ## FaceBook Site
 https://www.facebook.com/risorklatreklubb 
-
-## List of things that must be done:
-- Testing on devices and different browsers (Chrome, Safari, Edge, IE)
