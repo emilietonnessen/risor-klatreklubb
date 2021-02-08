@@ -1,7 +1,5 @@
 .form {
     background-color: rgba($color-white, .6);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
     padding: 3rem;
     border-bottom-right-radius: $border-radius-default;
     border-bottom-left-radius: $border-radius-default;
@@ -14,7 +12,7 @@
         // Safari
         min-width: 60vw;
     }
-
+ 
     @include respond(lap-lg) {
         min-width: unset;
     }
