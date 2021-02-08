@@ -49,6 +49,10 @@
             line-height: 5rem;
             letter-spacing: 2px;
 
+            @include respond(mobile) {
+                font-size: clamp(5rem, 5vw, 6rem);
+            } 
+
             @include respond(lap-lg) {
                 font-size: 7rem;
                 line-height: 7rem;
