@@ -6,10 +6,17 @@ $viewer-distance: 500px;
 .carousel {
 	padding: clamp(1.5rem, 2vw, 3rem);
 	perspective: 500px;
+	-webkit-perspective: 500px;
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	transform-box: fill-box;
+
+	// Safari bug
+	//width: 1px; min-width: 100%; *width: 100%;
 
 	> * {
 		flex: 0 0 auto;
@@ -17,31 +24,41 @@ $viewer-distance: 500px;
 
 	@include respond(tab-land) {
 		perspective: 500px;
+		-webkit-perspective: 500px;
 	}
 
 	@include respond(desk) {
 		perspective: 1000px;
+		-webkit-perspective: 1000px;
 	}
-	
-	figure {
-		margin: 0;
-		width: 90%;
-		transform-style: preserve-3d;
-		transition: transform 0.5s;
 
-		@include respond(tab-land) {
-			width: 60%;
-		}
-		
-		img {
-			width: 100%;
-			box-sizing: border-box;
-			padding: clamp(1rem, 2vw, 2rem) !important;
+	@supports (transform-style: preserve-3d) {
 			
-			&:not(:first-of-type) {
-				position: absolute;
-				left: 0;
-				top: 0;
+	
+		figure {
+			margin: 0;
+			width: 90%;
+			transform-style: preserve-3d;
+			-webkit-transform-style: preserve-3d;
+			transition: transform 0.5s;
+			transform-box: fill-box;
+			
+
+			@include respond(tab-land) {
+				width: 60%;
+			}
+			
+			img {
+				width: 100%;
+				box-sizing: border-box;
+				padding: clamp(1rem, 2vw, 2rem) !important;
+				transform-box: fill-box;
+				
+				&:not(:first-of-type) {
+					position: absolute;
+					left: 0;
+					top: 0;
+				}
 			}
 		}
 	}

@@ -3,9 +3,17 @@
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     padding: 3rem;
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px;
+    border-bottom-right-radius: $border-radius-default;
+    border-bottom-left-radius: $border-radius-default;
     backface-visibility: hidden;
+
+    @include respond(tab-land) {
+        border-top-right-radius: $border-radius-default;
+        border-bottom-left-radius: 0;
+
+        // Safari
+        min-width: 60vw;
+    }
 
     &__box {
         &:not(:last-child) {
@@ -15,6 +23,7 @@
 
     &__input,
     &__textarea {
+        border-radius: 0;
         height: 3.5rem;
         padding: 1rem .8rem;
         outline: 0;
@@ -44,6 +53,10 @@
     &__textarea {
         height: 10rem;
         width: 100%;
+    }
+
+    &__submit {
+        -webkit-appearance: none;
     }
 
     &__error {

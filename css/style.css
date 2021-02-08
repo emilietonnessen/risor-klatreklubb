@@ -818,10 +818,18 @@ body {
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   padding: 3rem;
-  border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
+}
+
+@media only screen and (min-width: 992px) {
+  .form {
+    border-top-right-radius: 3px;
+    border-bottom-left-radius: 0;
+    min-width: 60vw;
+  }
 }
 
 .form__box:not(:last-child) {
@@ -829,6 +837,7 @@ body {
 }
 
 .form__input, .form__textarea {
+  border-radius: 0;
   height: 3.5rem;
   padding: 1rem .8rem;
   outline: 0;
@@ -875,6 +884,10 @@ body {
   width: 100%;
 }
 
+.form__submit {
+  -webkit-appearance: none;
+}
+
 .form__error {
   color: #960000;
   font-weight: 500;
@@ -884,8 +897,8 @@ body {
 
 .carousel {
   padding: clamp(1.5rem, 2vw, 3rem);
+  perspective: 500px;
   -webkit-perspective: 500px;
-          perspective: 500px;
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -897,6 +910,9 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform-box: fill-box;
 }
 
 .carousel > * {
@@ -907,46 +923,47 @@ body {
 
 @media only screen and (min-width: 992px) {
   .carousel {
+    perspective: 500px;
     -webkit-perspective: 500px;
-            perspective: 500px;
   }
 }
 
 @media only screen and (min-width: 1920px) {
   .carousel {
+    perspective: 1000px;
     -webkit-perspective: 1000px;
-            perspective: 1000px;
   }
 }
 
-.carousel figure {
-  margin: 0;
-  width: 90%;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s;
-}
-
-@media only screen and (min-width: 992px) {
+@supports ((-webkit-transform-style: preserve-3d) or (transform-style: preserve-3d)) {
   .carousel figure {
-    width: 60%;
+    margin: 0;
+    width: 90%;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+    transition: transform 0.5s, -webkit-transform 0.5s;
+    transform-box: fill-box;
   }
-}
-
-.carousel figure img {
-  width: 100%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: clamp(1rem, 2vw, 2rem) !important;
-}
-
-.carousel figure img:not(:first-of-type) {
-  position: absolute;
-  left: 0;
-  top: 0;
+  @media only screen and (min-width: 992px) {
+    .carousel figure {
+      width: 60%;
+    }
+  }
+  .carousel figure img {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: clamp(1rem, 2vw, 2rem) !important;
+    transform-box: fill-box;
+  }
+  .carousel figure img:not(:first-of-type) {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
 }
 
 .carousel nav {
@@ -1183,12 +1200,6 @@ body {
   padding: 0 3rem;
 }
 
-@media only screen and (min-width: 992px) {
-  .header {
-    width: 114rem;
-  }
-}
-
 .header__headline--primary {
   text-align: center;
   font-size: 4rem;
@@ -1208,8 +1219,20 @@ body {
           animation-duration: 1s;
   -webkit-animation-timing-function: ease-out;
           animation-timing-function: ease-out;
-  font-size: clamp(2rem, 7.5vw, 7rem);
+  font-size: 2.5rem;
   letter-spacing: clamp(1rem, 2vw, 3rem);
+}
+
+@media only screen and (min-width: 576px) {
+  .header__headline--white {
+    font-size: 5rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .header__headline--white {
+    font-size: 7rem;
+  }
 }
 
 .row {
@@ -1466,7 +1489,7 @@ body {
   .section-contact {
     -ms-grid-columns: 1fr 3fr;
         grid-template-columns: 1fr 3fr;
-    width: clamp(90rem, 60vw, 130rem);
+    width: clamp(90rem, 90vw, 130rem);
     margin: 0 auto;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);

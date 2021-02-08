@@ -29,6 +29,7 @@ export default function carousel(root) {
 			images[i].style.padding = `${gap}px`;
 		for (i = 1; i < n; i++) {
 			images[i].style.transformOrigin = `50% 50% ${- apothem}px`;
+			images[i].style.transformBox = `fill-box`;
 			images[i].style.transform = `rotateY(${i * theta}rad)`;
 		}
 		if (bfc)
