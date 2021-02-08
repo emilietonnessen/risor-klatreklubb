@@ -464,10 +464,10 @@ body {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
   display: block;
-  height: 80vh;
+  height: 110vh;
 }
 
-@media (min-width: 1400px) {
+@media only screen and (min-width: 1200px) {
   .hero {
     height: 60vh;
   }
@@ -500,8 +500,8 @@ body {
           animation-duration: 1s;
   -webkit-animation-timing-function: ease-out;
           animation-timing-function: ease-out;
-  font-size: 5rem;
-  line-height: 7rem;
+  font-size: clamp(3.5rem, 5vw, 5rem);
+  line-height: 5rem;
   letter-spacing: 2px;
 }
 
@@ -521,8 +521,8 @@ body {
           animation-duration: 1s;
   -webkit-animation-timing-function: ease-out;
           animation-timing-function: ease-out;
-  font-size: clamp(1.4rem, 5vw, 1.8rem);
-  letter-spacing: clamp(1.4px, 5vw, 7px);
+  font-size: clamp(1.4rem, 4vw, 1.8rem);
+  letter-spacing: clamp(1.4px, 4vw, 7px);
   line-height: 2rem;
   margin-top: 2rem;
 }
