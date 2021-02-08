@@ -4,6 +4,10 @@
 
     // Mobile
     padding: 0 3rem;
+
+    @include respond(lap) {
+        width: $grid-width;
+    }
     
 
     
