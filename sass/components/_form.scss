@@ -15,6 +15,10 @@
         min-width: 60vw;
     }
 
+    @include respond(lap-lg) {
+        min-width: unset;
+    }
+
     &__box {
         &:not(:last-child) {
             margin-bottom: 2rem;

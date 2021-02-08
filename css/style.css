@@ -838,6 +838,12 @@ body {
   }
 }
 
+@media only screen and (min-width: 1400px) {
+  .form {
+    min-width: unset;
+  }
+}
+
 .form__box:not(:last-child) {
   margin-bottom: 2rem;
 }
