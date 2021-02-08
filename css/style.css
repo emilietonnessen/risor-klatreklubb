@@ -256,7 +256,7 @@ body {
   margin-left: 5px;
 }
 
-.btn:hover {
+.btn:hover, .btn:focus {
   -webkit-transform: translateY(-0.5rem) scale(1.02);
           transform: translateY(-0.5rem) scale(1.02);
   -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
@@ -293,7 +293,7 @@ body {
   font-weight: 400;
 }
 
-.btn--cta:hover, .btn--cta:link:hover, .btn--cta:visited:hover {
+.btn--cta:hover, .btn--cta:focus, .btn--cta:link:hover, .btn--cta:link:focus, .btn--cta:visited:hover, .btn--cta:visited:focus {
   -webkit-transform: translateY(-0.5rem) scale(1.06);
           transform: translateY(-0.5rem) scale(1.06);
 }
@@ -326,7 +326,7 @@ body {
   color: #FFFFFF;
 }
 
-.link:hover {
+.link:hover, .link:focus {
   text-decoration: none;
   cursor: pointer;
 }
@@ -821,8 +821,6 @@ body {
 
 .form {
   background-color: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
   padding: 3rem;
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;
