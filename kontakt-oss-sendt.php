@@ -38,7 +38,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO: -->
-    <!-- <meta name="image" property="og:image" content=""> -->
+    <meta name="image" property="og:image" content="https://www.tonnessen.com/projects/risor-klatreklubb/images/thumbnail.png">
     <meta name="author" content="Emilie Tønnessen - Junior Frontend Utvikler">
     <meta name="keyword"
         content="Risør, risor, norge, norway, klatreklubb, klatring, klatre, klubb, innendørs klatring, innendørs, risørhallen, agder klatreklubb, aust-agder klatreklubb, sørlandet klatreklubb, klatreutstyr, drop in, priser, info, informasjon, kontak, kontakt skjema, adresse, email">
