@@ -1,113 +1,122 @@
 .btn {
+  &,
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 400;
+    letter-spacing: 2px;
+    display: inline-block;
+    border-radius: 0;
+    border: 0;
+    outline: 0;
+    position: relative;
+    transition: all 0.2s;
+    border-radius: 3px;
+    line-height: inherit;
+    border-width: 0;
 
-    &,
-    &:link,
-    &:visited{
-        text-transform: uppercase;
-        text-decoration: none;
-        font-weight: 400;
-        letter-spacing: 2px;
-        display: inline-block;
-        border-radius: 0;
-        border: 0;
-        outline: 0;        
-        position: relative;
-        transition: all .2s;
-        border-radius: 3px;
-        line-height: inherit;
-        border-width: 0;
+    & i {
+      margin-left: 5px;
+    }
+  }
 
-        & i{
-            margin-left: 5px;
-        }
+  &:hover,
+  &:focus {
+    transform: translateY(-0.4rem) scale(1.01);
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+    cursor: pointer;
+  }
+
+  &:active {
+    transform: translateY(0.5rem) scale(1);
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+  }
+
+  // Colors
+  &--primary {
+    background-color: colors(primary);
+    color: $color-white;
+  }
+
+  &--secondary {
+    background-color: colors(secondary);
+    color: $color-white;
+  }
+
+  &--white {
+    background-color: $color-white;
+    color: $color-black;
+  }
+
+  &--rkk-facebook {
+    &:hover,
+    &:focus {
+      transform: unset;
+    }
+  }
+
+  // Sizes
+  &--cta,
+  &--cta:link,
+  &--cta:visited {
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+    border-radius: 5rem;
+    font-weight: 400;
+
+    &:hover,
+    &:focus {
+      transform: translateY(-0.5rem) scale(1.06);
     }
 
-    &:hover, &:focus {
-        transform: translateY(-0.5rem) scale(1.02);
-        box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
-        cursor: pointer;
+    &:active {
+      transform: translateY(0.5rem) scale(1);
     }
 
-    &:active{
-        transform: translateY(0.5rem) scale(1);
-        box-shadow: 0 .5rem 1rem rgba($color-black, 0.2);
+    @include respond(tab-land) {
+      padding: 2rem 3rem;
+      font-size: 1.8rem;
+      border-radius: 50px;
+      font-weight: 400;
     }
+  }
 
-    // Colors
-    &--primary {
-        background-color: colors(primary);
-        color: $color-white;
-    }
+  &--lg,
+  &--lg:link,
+  &--lg:visited {
+    padding: 1rem 2rem;
+    border-radius: 3px;
+  }
 
-    &--secondary {
-        background-color: colors(secondary);
-        color: $color-white;
-    }
-
-    &--white {
-        background-color: $color-white;
-        color: $color-black;
-    }
-
-
-    // Sizes
-    &--cta,
-    &--cta:link,
-    &--cta:visited {
-        padding: 1rem 2rem;
-        font-size: 1.4rem;
-        border-radius: 5rem;
-        font-weight: 400;
-
-        &:hover, &:focus {
-            transform: translateY(-0.5rem) scale(1.06);
-        }
-
-        &:active{
-            transform: translateY(0.5rem) scale(1);
-        }
-
-        @include respond(tab-land) {
-            padding: 2rem 3rem;
-            font-size: 1.8rem;
-            border-radius: 50px;
-            font-weight: 400;
-        }
-
-    }
- 
-    &--lg,
-    &--lg:link,
-    &--lg:visited {
-        padding: 1rem 2rem;
-        border-radius: 3px;
-    }
-
-    &--md,
-    &--md {
-        padding: 0rem 2rem;
-        border-radius: 3px;
-    }
+  &--md,
+  &--md {
+    padding: 0rem 2rem;
+    border-radius: 3px;
+  }
 }
 
 .link {
-    &, &:link, &:visited {
-        color: $color-white;
-    }
-    
-    &:hover, &:focus {
-        text-decoration: none;
-        cursor: pointer;
-    }
+  &,
+  &:link,
+  &:visited {
+    color: $color-white;
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    cursor: pointer;
+  }
 }
 
 .submit[type="submit"] {
-    outline: 0;
-    border: 0;
-    background-color: colors(secondary);
-    padding: 1rem 3rem;
-    color: $color-white;
-    font-size: 1.8rem;
-    border-radius: 3px;
-    transition: all .2s;
-} 
+  outline: 0;
+  border: 0;
+  background-color: colors(secondary);
+  padding: 1rem 3rem;
+  color: $color-white;
+  font-size: 1.8rem;
+  border-radius: 3px;
+  transition: all 0.2s;
+}

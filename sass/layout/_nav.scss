@@ -1,141 +1,146 @@
 .nav {
+  display: block;
+
+  &__logo-container {
+    background-color: $color-white;
+
+    // Mobile
+    width: 100vw;
+    height: 40vw;
+    max-height: 20rem;
+    box-shadow: $boxshadow-nav;
+
+    @include respond(tab-land) {
+      width: 100vw;
+      height: unset;
+      max-height: unset;
+      box-shadow: none;
+    }
+  }
+
+  &__logo {
     display: block;
+    transition: all 0.3s;
 
-    &__logo-container {
-        background-color: $color-white;
+    // Mobile
+    width: 40vw;
+    max-width: 20rem;
+    margin: 0;
+    position: absolute;
+    top: 0rem;
+    left: 50%;
+    transform: translateX(-50%) scale(1);
 
-        // Mobile
-        width: 100vw;
-        height: 40vw;
-        max-height: 20rem;
-        box-shadow: $boxshadow-nav;
-
-        @include respond(tab-land) {
-            width: 100vw;
-            height: unset;
-            max-height: unset;
-            box-shadow: none;
-        }
+    &:hover {
+      transform: translateX(-50%) scale(1.3);
     }
 
-    &__logo {
-        display: block;
-        transition: all .3s;
-
-        // Mobile
-        width: 40vw;
-        max-width: 20rem;
-        margin: 0;
-        position: absolute;
-        top: 0rem;
-        left: 50%;
-        transform: translateX(-50%) scale(1);
-
-        &:hover {
-            transform: translateX(-50%) scale(1.3);
-        }
-
-        &:active {
-            transform: translateX(-50%) scale(.9);
-        }
-
-        @include respond(tab-land) {
-            margin: 0 auto;
-            width: 20vw;
-            max-width: 35rem;
-            position: unset;
-            transform: unset;
-
-            &:hover {
-                transform:  scale(1.3);
-            }
-
-            &:active {
-                transform: scale(.9);
-            }
-        }
+    &:active {
+      transform: translateX(-50%) scale(0.9);
     }
 
-    &__menu{
-        background-color: $color-white;
-        box-shadow: $boxshadow-nav;
-        width: 100vw;
+    @include respond(tab-land) {
+      margin: 0 auto;
+      width: 20vw;
+      max-width: 35rem;
+      position: unset;
+      transform: unset;
 
-        // Mobile
-        z-index: 888;
-        height: 100vh;
-        position: absolute;
-        top: 0;
-        right: -100vw;
-        background-image: linear-gradient(to top left, rgba($color-primary, 1), rgba($color-secondary, 1));
-        transition: linear .4s;
+      &:hover {
+        transform: scale(1.1);
+      }
 
-        @include respond(tab-land) {
-            z-index: 999;
-            height: unset;
-            position: unset;
-            background-image: none;
-            backdrop-filter: blur(0px);
-            -webkit-backdrop-filter: blur(0px);
-            transition: none;
-        }
+      &:active {
+        transform: scale(0.9);
+      }
+    }
+  }
+
+  &__menu {
+    background-color: $color-white;
+    box-shadow: $boxshadow-nav;
+    width: 100vw;
+
+    // Mobile
+    z-index: 888;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: -100vw;
+    background-image: linear-gradient(
+      to top left,
+      rgba($color-primary, 1),
+      rgba($color-secondary, 1)
+    );
+    transition: linear 0.4s;
+
+    @include respond(tab-land) {
+      z-index: 999;
+      height: unset;
+      position: unset;
+      background-image: none;
+      backdrop-filter: blur(0px);
+      -webkit-backdrop-filter: blur(0px);
+      transition: none;
+    }
+  }
+
+  &__list {
+    display: flex;
+    list-style: none;
+
+    // Mobile
+    flex-direction: column;
+    text-align: center;
+    justify-content: start;
+    padding-top: 10rem;
+    height: 100vh;
+
+    @include respond(tab-land) {
+      justify-content: center;
+      flex-direction: row;
+      height: unset;
+      padding-top: 0rem;
+    }
+  }
+
+  &__link {
+    &:visited,
+    &:link {
+      padding: 1.5rem 3rem;
+      text-decoration: none;
+      text-transform: uppercase;
+      line-height: 5rem;
+      color: $color-white;
+      font-size: 1.7rem;
+      transition: all 0.3s;
+
+      &:hover {
+        color: colors(primary);
+        transform: scale(1.1) translateY(-0.5rem);
+      }
+
+      &:active {
+        color: colors(primary);
+        transform: scale(1.1) translateY(0.2rem);
+      }
+
+      @include respond(tab-land) {
+        color: $color-black;
+      }
     }
 
-    &__list{
-        display: flex;
-        list-style: none;
-        
-        // Mobile
-        flex-direction: column;
-        text-align: center;
-        justify-content: start;
-        padding-top: 10rem;
-        height: 100vh;
-
-        @include respond(tab-land) {
-            justify-content: center;
-            flex-direction: row;
-            height: unset;
-            padding-top: 0rem;
-        }
+    &--active:link,
+    &--active:visited {
+      color: colors(secondary);
     }
-
-    &__link {
-        &:visited,
-        &:link {
-            padding: 1.5rem 3rem;
-            text-decoration: none;
-            text-transform: uppercase;
-            line-height: 6rem;
-            color: $color-white;
-            font-size: 1.7rem;
-            transition: all .3s;
-
-            &:hover {
-                color: colors(primary);
-                transform: scale(1.2) translateY(-.5rem);
-            }
-
-            &:active {
-                color: colors(primary);
-                transform: scale(1.2) translateY(.2rem);
-            }
-
-            @include respond(tab-land) {
-                color: $color-black;
-            }
-        }
-        
-        &--active:link, &--active:visited {
-            color: colors(secondary);
-        }
-    }
+  }
 }
 
-.menu-open{
-    right: 0vw;
+.menu-open {
+  right: 0vw;
 }
 
-.fixed{
-    position: fixed;
+.fixed {
+  position: fixed;
 }

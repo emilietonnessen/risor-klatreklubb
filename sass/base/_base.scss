@@ -1,24 +1,24 @@
-*, 
+*,
 *::after,
 *::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 
 html {
-    font-size: 62.5%; 
-    @include html-body;
+  font-size: 62.5%;
+  @include html-body;
 }
 
-body {  
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;  
-    @include html-body;
-    background-color: $color-bg-grey;
+body {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  @include html-body;
+  background-color: $color-bg-grey;
 }
 
 .wrapper {
-    flex: 1 0 auto;
+  flex: 1 0 auto;
 }

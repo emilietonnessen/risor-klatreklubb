@@ -11,7 +11,7 @@
             $topic = $_POST['topic'];
             $message = $_POST['message'];
 
-            $to = "emilie@tonnessen.com";
+            $to = "kontakt@risorklatreklubb.no";
             $subject = "$topic \r\n";
             $body = "";
 
@@ -66,7 +66,7 @@
         <!-- Navigation: -->
         <nav class="nav">
             <div class="nav__logo-container">
-                <a href="https://www.tonnessen.com/projects/risor-klatreklubb/">
+                <a href="https://www.risorklatreklubb.no/">
                     <img src="./images/logo.png" alt="Risør Klatreklubb Logo" class="nav__logo">
                 </a>
             </div>
@@ -78,7 +78,7 @@
             </div>
             <div class="nav__menu">
                 <ul class="nav__list">
-                    <a class="nav__link" href="https://www.tonnessen.com/projects/risor-klatreklubb/">
+                    <a class="nav__link" href="https://www.risorklatreklubb.no/">
                         <li>Hjem</li>
                     </a>
                     <a class="nav__link" href="./informasjon.html">
@@ -90,8 +90,8 @@
                     <a class="nav__link" href="./om-oss.html">
                         <li>Om Oss</li>
                     </a>
-                    <a href="https://www.facebook.com/risorklatreklubb" target="_blank" rel="noopener noreferrer" class="nav__link">
-                        <li class="btn btn--secondary btn--md"><i class="fab fa-facebook"></i> Facebook</li>
+                    <a href="https://www.facebook.com/risorklatreklubb" target="_blank" rel="noopener noreferrer" >
+                        <li class="btn btn--secondary btn--md btn--rkk-facebook"><i class="fab fa-facebook"></i> Facebook</li>
                     </a>
                 </ul>
             </div>
@@ -105,7 +105,7 @@
                     <p>Caspersens vei 25</p>
                     <p>4950 Risør</p>
                     <h4 class="contact-info__title">Email</h4>
-                    <a class="link" href="mailto:test@test.com">risorklatreklubb@gmail.com </a>
+                    <a class="link" href="mailto:risorklatreklubb@gmail.com">risorklatreklubb@gmail.com </a>
                     <h4 class="contact-info__title">Åpningstider</h4>
                     <p class="">
                         Mandag <span class="">19:15 - 21:00</span>
@@ -117,7 +117,7 @@
                         Søndag <span class="">17:00 - 20:00</span>
                     </p>
                 </div>
-                <form action="https://www.tonnessen.com/projects/risor-klatreklubb/kontakt-oss-sendt" method="post" id="contact-form" class="form">
+                <form action="https://www.risorklatreklubb.no/kontakt-oss-sendt" method="post" id="contact-form" class="form">
                     <div class="feedback u-margin-bottom-large">
                         <?php
                             if($message_sent){

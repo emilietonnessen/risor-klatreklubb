@@ -1,122 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <!-- Technical: -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- SEO: -->
-    <meta name="image" property="og:image" content="https://www.tonnessen.com/projects/risor-klatreklubb/images/thumbnail.png">
-    <meta name="author" content="Emilie Tønnessen - Junior Frontend Utvikler">
-    <meta name="keyword" content="Risør, risor, norge, norway, klatreklubb, klatring, klatre, klubb, innendørs klatring, innendørs, risørhallen, agder klatreklubb, aust-agder klatreklubb, sørlandet klatreklubb, klatreutstyr, drop in, priser, info, informasjon, kontak, kontakt skjema, adresse, email">
-    <meta name="description" content="Risør Klatreklubb er opptatt av å gjøre en innsats for at absolutt alle skal få mulighet til å prøve å klatre hos oss, uansett alder, ferdighetsnivå og erfaring. Våre aktiviteter er basert på idrettsglede, fellesskap og god helse.">
+    <meta
+      name="image"
+      property="og:image"
+      content="https://www.tonnessen.com/projects/risor-klatreklubb/images/thumbnail.png"
+    />
+    <meta name="author" content="Emilie Tønnessen - Junior Frontend Utvikler" />
+    <meta
+      name="keyword"
+      content="Risør, risor, norge, norway, klatreklubb, klatring, klatre, klubb, innendørs klatring, innendørs, risørhallen, agder klatreklubb, aust-agder klatreklubb, sørlandet klatreklubb, klatreutstyr, drop in, priser, info, informasjon, kontak, kontakt skjema, adresse, email"
+    />
+    <meta
+      name="description"
+      content="Risør Klatreklubb er opptatt av å gjøre en innsats for at absolutt alle skal få mulighet til å prøve å klatre hos oss, uansett alder, ferdighetsnivå og erfaring. Våre aktiviteter er basert på idrettsglede, fellesskap og god helse."
+    />
 
     <!-- FontAwesome: -->
-    <link rel="stylesheet" href="./css/fa/all.css">
+    <link rel="stylesheet" href="./css/fa/all.css" />
 
     <!-- Adobe Fonts: -->
-    <link rel="stylesheet" href="https://use.typekit.net/fns1nxm.css">
+    <link rel="stylesheet" href="https://use.typekit.net/fns1nxm.css" />
 
     <!-- CSS: -->
-    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
 
     <!-- Page Icon: -->
-    <link rel="icon" href="./images/logo.png" type="image/gif" sizes="16x16">
+    <link rel="icon" href="./images/logo.png" type="image/gif" sizes="16x16" />
 
     <!-- Page Title -->
     <title>Hjem | Risør Klatreklubb</title>
-</head>
-<body id="body">
+  </head>
+  <body id="body">
     <div class="wrapper">
+      <!-- Navigation: -->
+      <nav class="nav">
+        <div class="nav__logo-container">
+          <a href="https://www.risorklatreklubb.no/">
+            <img
+              src="./images/logo.png"
+              alt="Risør Klatreklubb Logo"
+              class="nav__logo"
+            />
+          </a>
+        </div>
+        <div class="menu-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="nav__menu">
+          <ul class="nav__list">
+            <a
+              class="nav__link nav__link--active"
+              href="https://www.risorklatreklubb.no/"
+            >
+              <li>Hjem</li>
+            </a>
+            <a class="nav__link" href="./informasjon.html">
+              <li>Informasjon</li>
+            </a>
+            <a class="nav__link" href="./kontakt-oss.html">
+              <li>Kontakt Oss</li>
+            </a>
+            <a class="nav__link" href="./om-oss.html">
+              <li>Om Oss</li>
+            </a>
+            <a
+              href="https://www.facebook.com/risorklatreklubb"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="nav__link"
+            >
+              <li class="btn btn--secondary btn--md btn--rkk-facebook">
+                <i class="fab fa-facebook"></i> Facebook
+              </li>
+            </a>
+          </ul>
+        </div>
+      </nav>
 
-        <!-- Navigation: -->
-        <nav class="nav">
-            <div class="nav__logo-container">
-                <a href="https://www.tonnessen.com/projects/risor-klatreklubb/">
-                    <img src="./images/logo.png" alt="Risør Klatreklubb Logo" class="nav__logo">
-                </a>
-            </div>
-            <div class="menu-icon">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="nav__menu">
-                <ul class="nav__list">
-                    <a class="nav__link nav__link--active" href="https://www.tonnessen.com/projects/risor-klatreklubb/">
-                        <li>Hjem</li>
-                    </a>
-                    <a class="nav__link" href="./informasjon.html">
-                        <li>Informasjon</li>
-                    </a>
-                    <a class="nav__link" href="./kontakt-oss.html">
-                        <li>Kontakt Oss</li>
-                    </a>
-                    <a class="nav__link" href="./om-oss.html">
-                        <li>Om Oss</li>
-                    </a>
-                    <a href="https://www.facebook.com/risorklatreklubb" target="_blank" rel="noopener noreferrer" class="nav__link">
-                        <li class="btn btn--secondary btn--md"><i class="fab fa-facebook"></i> Facebook</li>
-                    </a>
-                </ul>
-            </div>
-        </nav>
+      <!-- Hero: -->
+      <header class="hero">
+        <div class="hero__content">
+          <h1 class="hero__headline">
+            <span class="hero__headline--primary">INTERESSERT I KLATRING?</span>
+            <span class="hero__headline--sub"
+              >idrettsglede, fellesskap og god helse</span
+            >
+          </h1>
+          <p class="hero__text">
+            Risør Klatreklubb er opptatt av å gjøre en innsats for at absolutt
+            alle skal få mulighet til å prøve å klatre hos oss, uansett alder,
+            ferdighetsnivå og erfaring. Våre aktiviteter er basert på
+            idrettsglede, fellesskap og god helse.
+          </p>
+          <a
+            href="./informasjon.html"
+            class="hero__btn btn btn--white btn--cta"
+          >
+            åpningstider og priser
+          </a>
+        </div>
+      </header>
 
-        <!-- Hero: -->
-        <header class="hero">
-            <div class="hero__content">
-                <h1 class="hero__headline">
-                    <span class="hero__headline--primary">INTERESSERT I KLATRING?</span>
-                    <span class="hero__headline--sub">idrettsglede, fellesskap og god helse</span>
-                </h1>
-                <p class="hero__text">
-                    Risør Klatreklubb er opptatt av å gjøre en innsats for at absolutt alle skal få mulighet til å prøve å klatre hos oss, uansett alder, ferdighetsnivå og erfaring. Våre aktiviteter er basert på idrettsglede, fellesskap og god helse.
-                </p>
-                <a href="./informasjon.html" class="hero__btn btn btn--white btn--cta">
-                    åpningstider og priser
-                </a>
+      <main>
+        <!-- Section About: -->
+        <section class="section-about">
+          <div class="row">
+            <div class="col-1-of-2">
+              <h2 class="heading__secondary">
+                En klubb hvor alle er inkludert
+              </h2>
+              <p class="paragraph">
+                Risør klatreklubb er en klatreklubb for alle. Dette innebærer at
+                vi er opptatt av å gjøre en innsats for at absolutt alle skal få
+                mulighet til å prøve å klatre hos oss, uansett alder,
+                ferdighetsnivå og erfaring.
+              </p>
+              <p class="paragraph">
+                Våre aktiviteter er basert på idrettsglede, fellesskap og god
+                helse. For at våre medlemmer skal oppleve dette ønsker vi å
+                legge til rette for at skal få kjenne på mestringsfølelse, et
+                godt samhold og at de skal føle seg inkludert. Vi ønsker å være
+                en klubb med et godt etablert klatremiljø for ungdom, spesielt
+                for de som ikke allerede er med i et idrettslag.
+              </p>
+              <a href="./om-oss.html" class="btn btn--secondary btn--lg"
+                >Les mer</a
+              >
             </div>
-        </header>
-
-        <main>
-
-            <!-- Section About: -->
-            <section class="section-about">
-                <div class="row">
-                    <div class="col-1-of-2">
-                        <h2 class="heading__secondary">
-                            En klubb hvor alle er inkludert
-                        </h2>
-                        <p class="paragraph">
-                            Risør klatreklubb er en klatreklubb for alle. Dette innebærer at vi er opptatt av å gjøre en innsats for at absolutt
-                            alle skal få mulighet til å prøve å klatre hos oss, uansett alder, ferdighetsnivå og erfaring.
-                        </p>
-                        <p class="paragraph">
-                            Våre aktiviteter er basert på idrettsglede, fellesskap og god helse. For at våre medlemmer skal oppleve dette ønsker vi
-                            å legge til rette for at skal få kjenne på mestringsfølelse, et godt samhold og at de skal føle seg inkludert. Vi ønsker
-                            å være en klubb med et godt etablert klatremiljø for ungdom, spesielt for de som ikke allerede er med i et idrettslag.
-                        </p>
-                        <a href="./om-oss.html" class="btn btn--secondary btn--lg">Les mer</a>
-                    </div>
-                    <div class="col-1-of-2">
-                        <div class="composition">
-                            <img src="./images/about-1-sm.jpg" alt="Photo 1" class="composition__photo composition__photo--p1">
-                            <img src="./images/about-2-sm.jpg" alt="Photo 2" class="composition__photo composition__photo--p2">
-                            <img src="./images/about-3-sm.jpg" alt="Photo 3" class="composition__photo composition__photo--p3">
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-        
+            <div class="col-1-of-2">
+              <div class="composition">
+                <img
+                  src="./images/about-1-sm.jpg"
+                  alt="Photo 1"
+                  class="composition__photo composition__photo--p1"
+                />
+                <img
+                  src="./images/about-2-sm.jpg"
+                  alt="Photo 2"
+                  class="composition__photo composition__photo--p2"
+                />
+                <img
+                  src="./images/about-3-sm.jpg"
+                  alt="Photo 3"
+                  class="composition__photo composition__photo--p3"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
     </div>
 
     <!-- Footer: -->
     <footer class="footer">
-        <span class="current-year"></span> © Risør Klatreklubb. All rights reserved
+      <span class="current-year"></span> © Risør Klatreklubb. All rights
+      reserved.
     </footer>
 
     <script src="./js/index.js" type="module"></script>
-</body>
+  </body>
 </html>
