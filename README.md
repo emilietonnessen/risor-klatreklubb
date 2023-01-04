@@ -4,6 +4,8 @@ Risør klatreklubb is an indoor Climbing Club located in Risør, Norway. They ar
 
 I've previously created their logo which they are currently using.
 
+The design is inspired from the "Adcanced CSS and Sass" course which I took on Udemy. https://www.udemy.com/course/advanced-css-and-sass/
+
 ## List of Languages
 
 - HTML
